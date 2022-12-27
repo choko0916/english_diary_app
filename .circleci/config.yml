@@ -5,7 +5,7 @@ jobs:
         environment:
           RAILS_ENV: test
           POSTGRES_HOST: 127.0.0.1
-      - image: circleci/postgres:13.9
+      - image: cimg/postgres:13.9
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: english_diary_app_test
@@ -34,7 +34,7 @@ jobs:
         environment:
           RAILS_ENV: test
           POSTGRES_HOST: 127.0.0.1
-      - image: circleci/postgres:13.9
+      - image: cimg/postgres:13.9
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: english_diary_app_test
