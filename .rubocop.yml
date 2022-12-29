@@ -1,0 +1,151 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "log/**/*"
+    - "bin/**/*"
+    - "public/**/*"
+    - "lib/templates/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+    - "lib/tasks/auto_annotate_models.rake"
+    - 'tmp/**/*'
+    - 'storage/**/*'
+
+  DisplayCopNames: true
+  NewCops: enable
+  TargetRubyVersion: 3.1
+
+##### Layout #####
+# 1行の長さ
+Layout/LineLength:
+  Max: 130
+  # #で始まる行, classで始まる行は長さのチェックをしない
+  AllowedPatterns: ['\A# .+', '\Aclass .+', '\ARSpec.describe .+']
+  Exclude:
+    - "config/initializers/**.rb"
+    - "db/migrate/**.rb"
+
+# 複数行のメソッドチェーンはインデントを1つ深くして書く
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+##### Lint #####
+# do~endが空であることを今はSpecファイルだけ許可
+Lint/EmptyBlock:
+  Exclude:
+    - "spec/**/*"
+
+##### Rails #####
+# InverseOfは書かなくてもいい
+Rails/InverseOf:
+  Enabled: false
+
+# Rails.env.staging?を使えるようにする
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+
+##### RSpec #####
+# 日本語だと「〜の場合」になるので suffix でないと対応できない
+RSpec/ContextWording:
+  Enabled: false
+
+# RSpecのネストは8つまで
+RSpec/NestedGroups:
+  Max: 8
+
+# it do~endでテストする数
+RSpec/MultipleExpectations:
+  Max: 10
+
+# it do~end内の行数
+RSpec/ExampleLength:
+  Max: 25
+
+# letやsubjectの数
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+##### Bundler #####
+# Gemはアルファベット順に並べなくていい
+Bundler/OrderedGems:
+  Enabled: false
+
+##### Styles #####
+# frozen_string_literal：trueは書かない
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# シンボルの配列の書き方の指定 :%iは使わない
+Style/SymbolArray:
+  Enabled: false
+
+# Module名::Class名の書き方の指定なし
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# 英語以外の文字があることを許可
+Style/AsciiComments:
+  Enabled: false
+
+# ModuleやClassのドキュメントを書かなくてもいい
+Style/Documentation:
+  Enabled: false
+
+# シングルクオートではなく、ダブルクオートを使う
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# if/unless分を1行で書かなくてもいい
+Style/IfUnlessModifier:
+  Enabled: false
+
+# Procとしてシンボルを使う設定
+Style/SymbolProc:
+  Exclude:
+    - "db/migrate/**.rb"
+
+##### Metrics #####
+# 引数の数は5以上で警告とする
+Metrics/ParameterLists:
+  Max: 5
+
+
+# Block内の行数指定
+Metrics/BlockLength:
+  Exclude:
+    - "lib/tasks/**/*"
+    - "config/routes.rb"
+    - "config/routes/**/**"
+    - "config/environments/**"
+    - "spec/**/**"
+    - "db/fixtures/**/**"
+    - "app/views/api/**/**"
+
+# メソッドの行数は36行まで
+Metrics/MethodLength:
+  Max: 36
+
+# 循環複雑度は10がMax
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+# AbiSize
+Metrics/AbcSize:
+  Max: 48
+  Exclude:
+    - "db/migrate/**.rb"
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Metrics/ClassLength:
+  Max: 250

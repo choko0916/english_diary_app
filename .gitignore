@@ -72,4 +72,4 @@ yarn-debug.log*
 !/storage/.keep
 /public/uploads
 
-# End of https://www.toptal.com/developers/gitignore/api/rails
+# End of https://www.toptal.com/developers/gitignore/api/rails.env
