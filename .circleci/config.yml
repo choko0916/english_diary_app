@@ -1,7 +1,7 @@
 jobs:
   rubocop:
     docker:
-      - image: cimg/ruby:3.1.0
+      - image: cimg/ruby:3.1.0-node
         environment:
           RAILS_ENV: test
           POSTGRES_HOST: 127.0.0.1
@@ -30,7 +30,7 @@ jobs:
 
   rspec:
     docker:
-      - image: cimg/ruby:3.1.0
+      - image: cimg/ruby:3.1.0-node
         environment:
           RAILS_ENV: test
           POSTGRES_HOST: 127.0.0.1
