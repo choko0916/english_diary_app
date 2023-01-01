@@ -10,6 +10,6 @@ require "rails_helper"
 #     end
 #   end
 # end
-RSpec.describe HomesHelper, type: :helper do
+RSpec.describe HomesHelper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
