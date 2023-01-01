@@ -14,7 +14,7 @@
       <nav id="global_navi">
         <ul>
           <% if user_signed_in? %>
-            <strong><%= link_to current_user.username, homes_show_path %></strong>
+            <strong><%= link_to current_user.email, homes_show_path %></strong>
             <li><%= link_to "プロフィール変更", edit_user_registration_path %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
