@@ -4,4 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :timeoutable, :trackable
+
+  def self.guest
+    find_or_created_by!(email: "guest@example.com") do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.confirmed_at = Time.zone.now
+      user.username = "ゲスト"
+    end
+  end
 end
