@@ -1,4 +1,8 @@
 ja:
+  users:
+    sessions:
+      guest_sign_in:
+        success: ゲストユーザーとしてログインしました
   activerecord:
     attributes:
       user:
