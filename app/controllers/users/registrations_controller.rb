@@ -36,14 +36,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    if current_user.email == "guest@example.com"
+      return redirect_to root_path, alert: t(".update_alert")
+    end
+
+    super
+  end
 
   # DELETE /resource
   def destroy
     if current_user.email == "guest@example.com"
-      return redirect_to root_path, alert: t(".alert")
+      return redirect_to root_path, alert: t(".destroy_alert")
     end
 
     super
