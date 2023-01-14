@@ -3,7 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-
+  before_action :ensure_normal_user, only: :destroy
   # GET /resource/sign_up
   # def new
   #   super
@@ -32,6 +32,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def ensure_normal_user
+    return unless current_user.email == "guest@example.com"
+
+    redirect_to root_path, alert: "ゲストユーザーは削除できません。"
+  end
   # GET /resource/edit
   # def edit
   #   super
