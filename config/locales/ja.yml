@@ -1,4 +1,13 @@
 ja:
+  users:
+    sessions:
+      guest_sign_in:
+        success: ゲストユーザーとしてログインしました
+    registrations:
+      update:
+        update_alert: ゲストユーザーの更新はできません
+      destroy:
+        destroy_alert: ゲストユーザーは削除できません
   activerecord:
     attributes:
       user:
