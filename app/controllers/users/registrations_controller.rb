@@ -3,7 +3,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  before_action :ensure_normal_user, only: :destroy
   # GET /resource/sign_up
   # def new
   #   super
@@ -31,12 +30,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       respond_with resource, status: :see_other # 登録失敗時のrespond_withにerror出したいので、ここで303 statusを追加
     end
   end
-
-  def ensure_normal_user
-    return unless current_user.email == "guest@example.com"
-
-    redirect_to root_path, alert: t(".alert")
-  end
   # GET /resource/edit
   # def edit
   #   super
@@ -48,9 +41,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    if current_user.email == "guest@example.com"
+      return redirect_to root_path, alert: t(".alert")
+    end
+
+    super
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
