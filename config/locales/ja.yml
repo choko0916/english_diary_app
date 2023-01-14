@@ -3,6 +3,9 @@ ja:
     sessions:
       guest_sign_in:
         success: ゲストユーザーとしてログインしました
+    registrations:
+      destroy:
+        alert: ゲストユーザーは削除できません
   activerecord:
     attributes:
       user:
