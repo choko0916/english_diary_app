@@ -1,6 +1,8 @@
 class AddAvatarAndBioToUsers < ActiveRecord::Migration[7.0]
   def change
-    add_column :users, :avatar, :string
-    add_column :users, :bio, :string
+    change_table :users, bulk: true do |t|
+      t.string :avatar
+      t.string :username
+    end
   end
 end
