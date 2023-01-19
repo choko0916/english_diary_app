@@ -15,7 +15,7 @@
         <ul>
           <% if user_signed_in? %>
             <strong><%= link_to current_user.username, homes_show_path %></strong>
-            <li><%= link_to "プロフィール変更", edit_profile_path(current_user.id) %></li>
+            <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
             <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to "サインアップ", new_user_registration_path %></li>
