@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
       redirect_to homes_show_path
     else
       flash[:notice] = "プロフィールの更新に失敗しました"
-      edit_profiles_path
+      render edit_profiles_path
     end
   end
 end
