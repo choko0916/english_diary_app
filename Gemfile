@@ -54,6 +54,9 @@ gem "active_storage_validations"
 gem "devise"
 gem "dotenv-rails"
 
+# 画像アップロード
+gem "carrierwave"
+# 画像のリサイズ
 gem "mini_magick"
 
 group :development, :test do
