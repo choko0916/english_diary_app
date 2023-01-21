@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  mount_uploader :avatar, AvatarUploader
   has_one_attached :avatar
 
   validates :avatar, content_type: { in: %w[image/jpeg image/gif image/png],
