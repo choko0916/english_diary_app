@@ -4,7 +4,6 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    current_user.avatar.attach(params[:user][:avatar]) if current_user.avatar.blank?
     if current_user.update(user_params)
       flash[:notice] = "プロフィールを更新しました"
       redirect_to homes_show_path
