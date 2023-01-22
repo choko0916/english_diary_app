@@ -8,6 +8,9 @@ ja:
         update_alert: ゲストユーザーの更新はできません
       destroy:
         destroy_alert: ゲストユーザーは削除できません
+  profiles:
+    update:
+      update_alert: ゲストユーザーの更新はできません
   activerecord:
     attributes:
       user:

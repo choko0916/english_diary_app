@@ -4,6 +4,10 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    if current_user.email == "guest@example.com"
+      return redirect_to root_path, alert: t(".update_alert")
+    end
+
     if current_user.update(user_params)
       flash[:notice] = "プロフィールを更新しました"
       redirect_to homes_show_path
