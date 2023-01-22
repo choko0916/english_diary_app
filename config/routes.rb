@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'diaries/index'
   root "homes#index"
   get "homes/show"
   resource :profiles, only: [:edit, :update]
+  resources :diaries
   devise_for :users, controllers: {
     registrations: "users/registrations",
     sessions: "users/sessions"
