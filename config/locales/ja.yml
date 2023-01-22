@@ -11,6 +11,8 @@ ja:
   profiles:
     update:
       update_alert: ゲストユーザーの更新はできません
+      profile_update_notice: プロフィールを更新しました
+      profile_update_alert: ロフィールの更新に失敗しました
   activerecord:
     attributes:
       user:

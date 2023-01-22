@@ -9,11 +9,9 @@ class ProfilesController < ApplicationController
     end
 
     if current_user.update(user_params)
-      flash[:notice] = "プロフィールを更新しました"
-      redirect_to homes_show_path
+      redirect_to homes_show_path, notice: t(".profile_update_notice")
     else
-      flash[:notice] = "プロフィールの更新に失敗しました"
-      render edit_profiles_path
+      render edit_profiles_path, alert: t(".profile_update_alert")
     end
   end
 end
