@@ -13,6 +13,10 @@ ja:
       update_alert: ゲストユーザーの更新はできません
       profile_update_notice: プロフィールを更新しました
       profile_update_alert: ロフィールの更新に失敗しました
+  diaries:
+    create:
+      diary_new_notice: 日記を投稿しました
+      diary_new_alert: 日記の投稿に失敗しました
   activerecord:
     attributes:
       user:
