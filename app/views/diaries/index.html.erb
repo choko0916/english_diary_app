@@ -3,14 +3,22 @@
   <div class="diaries">
     <% @diaries.each do |diary| %>
       <div class="diary">
-        <div class="created_at"><%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %></div>
+        <div class="created_at">
+          <%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+        </div>
         <div class="photo">
           <% if diary.photo? %>
             <%= image_tag diary.photo.url %>
           <% end %>
         </div>
-        <div class="japanese_diary"><%= diary.japanese_diary %></div>
-        <div class="english_diary"><%= diary.english_diary %></div>
+        <div class="japanese_diary">
+          <p>日本語</p>
+          <%= diary.japanese_diary %>
+        </div>
+        <div class="english_diary">
+          <p>英語</p>
+          <%= diary.english_diary %>
+        </div>
       </div>
     <% end %>
   </div>
