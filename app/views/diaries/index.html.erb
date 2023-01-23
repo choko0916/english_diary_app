@@ -1,2 +1,20 @@
-<h1>Diaries#index</h1>
-<p>Find me in app/views/diaries/index.html.erb</p>
+<div class="index_container">
+  <h2><%= current_user.username %>さんの日記一覧</h2>
+  <div class="diaries">
+    <% @diaries.each do |diary| %>
+      <div class="diary">
+        <div class="created_at"><%= diary.created_at %></div>
+        <div class="photo">
+          <% if diary.photo? %>
+            <%= image_tag diary.photo.url %>
+          <% end %>
+        </div>
+        <div class="japanese_diary"><%= diary.japanese_diary %></div>
+        <div class="english_diary"><%= diary.english_diary %></div>
+        <div class="updated_at"><%= diary.updated_at %></div>
+      </div>
+    <% end %>
+  </div>
+</div>
+ 
+
