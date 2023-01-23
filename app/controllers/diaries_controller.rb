@@ -1,6 +1,8 @@
 class DiariesController < ApplicationController
   before_action :authenticate_user!
-  def index; end
+  def index
+    @diaries = Diary.where(user_id: current_user.id)
+  end
 
   def show; end
 
