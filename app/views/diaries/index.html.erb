@@ -2,16 +2,25 @@
   <h2><%= current_user.username %>さんの日記一覧</h2>
   <div class="diaries">
     <% @diaries.each do |diary| %>
-      <div class="diary">
-        <div class="created_at">
-          <%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+      <div class="diary_container">
+        <div class="diary_container_top">
+          <div class="created_at">
+            <%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+          </div>
+          <div class="private_flag">
+            <% if diary.private_flag == true %>
+              <p>非公開</p>
+            <% else %>
+              <p>公開</p>
+            <% end %>
+          </div>
         </div>
         <div class="photo">
           <% if diary.photo? %>
             <%= image_tag diary.photo.url %>
           <% end %>
         </div>
-        <div class="diary_container">
+        <div class="diary">
           <div class="english_diary">
             <%= diary.english_diary %>
           </div>
