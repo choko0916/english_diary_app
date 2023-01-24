@@ -21,6 +21,13 @@
             </div>
           <% end %>
         </div>
+        <div class="private_flag">
+          <% if diary.private_flag == true %>
+            <p>非公開</p>
+          <% else %>
+            <p>公開</p>
+          <% end %>
+        </div>
         <div class="link">
           <%= link_to "編集", edit_diary_path(diary.id) %>
         </div>
