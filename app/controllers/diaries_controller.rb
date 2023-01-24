@@ -1,7 +1,7 @@
 class DiariesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @diaries = Diary.where(user_id: current_user.id)
+    @diaries = Diary.where(user_id: current_user.id).order(created_at: "DESC")
   end
 
   def show; end
