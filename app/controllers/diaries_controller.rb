@@ -10,7 +10,9 @@ class DiariesController < ApplicationController
     @diary = Diary.new
   end
 
-  def edit; end
+  def edit
+    @diary = Diary.find(params[:id])
+  end
 
   def create
     @diary = Diary.new(diary_params)
@@ -22,7 +24,15 @@ class DiariesController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    @diary = Diary.find(params[:id])
+    if @diary.update(diary_params)
+      redirect_to diaries_path, notice: t(".diary_update_notice")
+    else
+      flash.now[:alert] = t(".diary_update_alert")
+      render edit_diary_path
+    end
+  end
 
   def destroy; end
 
