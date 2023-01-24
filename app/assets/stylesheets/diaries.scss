@@ -2,6 +2,11 @@ h2 {
   padding-left: 30px;
 }
 
+.diary_container_top {
+  display: flex;
+  justify-content: space-between;
+}
+
 .created_at {
   color: rgb(124, 121, 121);
   padding-bottom: 15px;
