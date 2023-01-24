@@ -20,7 +20,7 @@ class DiariesController < ApplicationController
       redirect_to diaries_path, notice: t(".diary_new_notice")
     else
       flash.now[:alert] = t(".diary_new_alert")
-      render new_diary_path
+      render :new
     end
   end
 
