@@ -13,12 +13,10 @@
         </div>
         <div class="diary_container">
           <div class="english_diary">
-            <p>英語</p>
             <%= diary.english_diary %>
           </div>
           <% if diary.japanese_diary? %>
             <div class="japanese_diary">
-              <p>日本語</p>
               <%= diary.japanese_diary %>
             </div>
           <% end %>
