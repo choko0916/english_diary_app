@@ -6,6 +6,13 @@
         <div class="created_at">
           <%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
         </div>
+        <div class="private_flag">
+          <% if diary.private_flag == true %>
+            <p>非公開</p>
+          <% else %>
+            <p>公開</p>
+          <% end %>
+        </div>
         <div class="photo">
           <% if diary.photo? %>
             <%= image_tag diary.photo.url %>
@@ -19,13 +26,6 @@
             <div class="japanese_diary">
               <%= diary.japanese_diary %>
             </div>
-          <% end %>
-        </div>
-        <div class="private_flag">
-          <% if diary.private_flag == true %>
-            <p>非公開</p>
-          <% else %>
-            <p>公開</p>
           <% end %>
         </div>
         <div class="link">
