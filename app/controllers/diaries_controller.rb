@@ -36,6 +36,10 @@ class DiariesController < ApplicationController
 
   def destroy; end
 
+  def all_diaries
+    @diaries = Diary.where.not(private_flag: true)
+  end
+
   private
 
   def diary_params
