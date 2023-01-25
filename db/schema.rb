@@ -84,8 +84,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_25_065525) do
   create_table "words", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "diary_id", null: false
-    t.string "japanese_words", null: false
-    t.string "english_words", null: false
+    t.string "japanese_word", null: false
+    t.string "english_word", null: false
     t.text "memo"
     t.boolean "memorized_flag"
     t.datetime "created_at", null: false
