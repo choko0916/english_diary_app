@@ -11,15 +11,21 @@ h2 {
 
 .diary_container_top {
   display: flex;
-  justify-content: space-between;
+}
+
+.avatar {
+  padding-right: 15px;
+}
+
+.username {
+  padding-right: 15px;
 }
 
 .created_at {
   color: rgb(124, 121, 121);
-  padding-bottom: 15px;
+  padding-right: 15px;
 }
 
 .english_diary {
   padding: 15px 0;
 }
-
