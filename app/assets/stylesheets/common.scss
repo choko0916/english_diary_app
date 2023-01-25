@@ -1,21 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #262338;
   font-size: 14px;
-  background-color: #F1F9FF;
+  background-color: rgb(247, 247, 252);
 }
 
 a {
-  color: #333;
+  color: #262338;
 }
 
 a:visited {
-  color: #333;
+  color: #262338;
 }
 
 a:hover {
-  color: #333;
+  color: #262338;
   font-weight: 700;
   text-decoration: none;
 }
@@ -36,7 +36,7 @@ img {
 header {
   margin: 0 auto;
   padding: 0 15px;
-  background-color: #2699FB;
+  background-color: #f8b042;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -89,7 +89,7 @@ header h1 {
 
 footer {
   text-align: center;
-  background-color: #2699FB;
+  background-color: #f8b042;
   margin-bottom: 0;
   color: white;
   padding: 10px 0;
