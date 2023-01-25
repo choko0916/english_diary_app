@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "homes/show"
   resource :profiles, only: [:edit, :update]
   resources :diaries
+  resources :all_diaries, only: [:index]
   devise_for :users, controllers: {
     registrations: "users/registrations",
     sessions: "users/sessions"
