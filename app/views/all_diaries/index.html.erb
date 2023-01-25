@@ -3,6 +3,9 @@
   <div class="diaries">
     <% @diaries.each do |diary| %>
       <div class="diary_container">
+        <div class="username">
+          <%= diary.user.username %>
+        </div>
         <div class="diary_container_top">
           <div class="created_at">
             <%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
