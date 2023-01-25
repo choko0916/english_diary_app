@@ -3,6 +3,11 @@
   <div class="diaries">
     <% @diaries.each do |diary| %>
       <div class="diary_container">
+        <% if diary.user.avatar? %>
+          <div class="avatar">
+            <%= image_tag diary.user.avatar.url %>
+          </div>
+        <% end %>
         <div class="username">
           <%= diary.user.username %>
         </div>
