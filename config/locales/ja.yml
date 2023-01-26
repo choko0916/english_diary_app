@@ -20,6 +20,8 @@ ja:
     update:
       diary_update_notice: 日記を編集しました
       diary_update_alert: 日記の編集に失敗しました
+    destroy:
+      diary_destroy_notice: 日記を削除しました
   activerecord:
     attributes:
       user:

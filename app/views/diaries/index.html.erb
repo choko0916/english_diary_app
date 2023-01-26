@@ -32,6 +32,7 @@
         </div>
         <div class="link">
           <%= link_to "編集", edit_diary_path(diary.id) %>
+          <%= button_to "削除", diary_path(diary.id), { method: :delete, data: { confirm: "本当に削除しますか？" } } %>
         </div>
       </div>
     <% end %>
