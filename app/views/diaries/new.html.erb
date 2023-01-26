@@ -2,7 +2,6 @@
   <h3>日記投稿</h3>
 
   <%= form_with model: @diary do |f| %>
-    <%= f.hidden_field :user_id, value: current_user.id %>
     <div class="field">
       <%= f.label :japanese_diary, "日記（日本語）", class:"bold" %><br>
       <%= f.text_area :japanese_diary, class:"wide_field", placeholder: "日本語で日記を入力" %>
