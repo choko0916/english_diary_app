@@ -16,7 +16,7 @@ class DiariesController < ApplicationController
 
   def create
     @diary = Diary.new(diary_params)
-    if @diary.save
+    if @diary.save!
       redirect_to diaries_path, notice: t(".diary_new_notice")
     else
       flash.now[:alert] = t(".diary_new_alert")
@@ -43,6 +43,8 @@ class DiariesController < ApplicationController
   private
 
   def diary_params
-    params.require(:diary).permit(:japanese_diary, :english_diary, :photo, :private_flag).merge(user_id: current_user.id)
+    params.require(:diary).permit(:japanese_diary, :english_diary, :photo, :private_flag,
+                                  words_attributes: [:id, :japanese_word, :english_word, :memo, :_destroy])
+      .merge(user_id: current_user.id)
   end
 end
