@@ -4,7 +4,9 @@ class DiariesController < ApplicationController
     @diaries = Diary.where(user_id: current_user.id).order(created_at: "DESC")
   end
 
-  def show; end
+  def show
+    @diary = Diary.find(params[:id])
+  end
 
   def new
     @diary = Diary.new
