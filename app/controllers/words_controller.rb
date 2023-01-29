@@ -1,5 +1,7 @@
 class WordsController < ApplicationController
-  def index; end
+  def index
+    @words = Word.all
+  end
 
   def show; end
   def new; end
