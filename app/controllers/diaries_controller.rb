@@ -44,7 +44,7 @@ class DiariesController < ApplicationController
 
   def diary_params
     params.require(:diary).permit(:japanese_diary, :english_diary, :photo, :private_flag,
-                                  words_attributes: [:id, :japanese_word, :english_word, :memo, :_destroy])
+                                  words_attributes: [:user_id, :id, :japanese_word, :english_word, :memo, :_destroy])
       .merge(user_id: current_user.id)
   end
 end
