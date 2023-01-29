@@ -7,6 +7,9 @@
           <div class="created_at">
             <%= word.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
           </div>
+          <div class="link">
+            <%= link_to "日記へ", diary_path(id: word.diary_id) %>
+          </div>
         </div>
         <div class="word">
           <div class="japanese_word">
