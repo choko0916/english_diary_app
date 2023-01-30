@@ -74,6 +74,10 @@ header h1 {
   background-color: white;
 }
 
+#sidebar ul {
+  position: fixed;
+}
+
 #sidebar ul li {
   display: inline-block;
   width: 100%;
