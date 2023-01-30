@@ -60,6 +60,26 @@ header h1 {
   display: inline-block;
 }
 
+#main_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main_area {
+  width: 70%;
+}
+
+#sidebar {
+  width: 20%;
+  background-color: white;
+}
+
+#sidebar ul li {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+}
+
 .main {
   text-align: center;
   color: #7F7F7F;
