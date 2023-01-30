@@ -1,21 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #262338;
   font-size: 14px;
-  background-color: #F1F9FF;
+  background-color: rgb(247, 247, 252);
 }
 
 a {
-  color: #333;
+  color: #262338;
 }
 
 a:visited {
-  color: #333;
+  color: #262338;
 }
 
 a:hover {
-  color: #333;
+  color: #262338;
   font-weight: 700;
   text-decoration: none;
 }
@@ -36,7 +36,7 @@ img {
 header {
   margin: 0 auto;
   padding: 0 15px;
-  background-color: #2699FB;
+  background-color: #f8b042;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -60,36 +60,33 @@ header h1 {
   display: inline-block;
 }
 
-.main {
-  text-align: center;
-  color: #7F7F7F;
+#main_wrapper {
+  display: flex;
 }
 
-.main_message h1 {
-  font-size: 70px;
+#main_area {
+  width: 82%;
 }
 
-.main_message p {
-  font-size: 25px;
+#sidebar {
+  width: 18%;
+  background-color: white;
+  border-right: 1px solid rgb(221, 220, 220);
 }
 
-.sign_up button {
-  margin: 80px 0;
-  padding: 5px 15px;
-  background-color: #2699FB;
-  border: none;
-  border-radius: 3px;
-  color: white;
+#sidebar ul {
+  position: fixed;
 }
 
-.wrapper {
-  margin-top: 200px;
-  height: 500px;
+#sidebar ul li {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
 }
 
 footer {
   text-align: center;
-  background-color: #2699FB;
+  background-color: #f8b042;
   margin-bottom: 0;
   color: white;
   padding: 10px 0;

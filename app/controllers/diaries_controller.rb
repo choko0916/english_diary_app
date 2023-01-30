@@ -4,7 +4,9 @@ class DiariesController < ApplicationController
     @diaries = Diary.where(user_id: current_user.id).order(created_at: "DESC")
   end
 
-  def show; end
+  def show
+    @diary = Diary.find(params[:id])
+  end
 
   def new
     @diary = Diary.new
@@ -16,7 +18,7 @@ class DiariesController < ApplicationController
 
   def create
     @diary = Diary.new(diary_params)
-    if @diary.save
+    if @diary.save!
       redirect_to diaries_path, notice: t(".diary_new_notice")
     else
       flash.now[:alert] = t(".diary_new_alert")
@@ -34,11 +36,17 @@ class DiariesController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @diary = Diary.find(params[:id])
+    @diary.destroy
+    redirect_to diaries_path, notice: t(".diary_destroy_notice")
+  end
 
   private
 
   def diary_params
-    params.require(:diary).permit(:id, :user_id, :japanese_diary, :english_diary, :photo, :private_flag)
+    params.require(:diary).permit(:japanese_diary, :english_diary, :photo, :private_flag,
+                                  words_attributes: [:user_id, :id, :japanese_word, :english_word, :memo, :_destroy])
+      .merge(user_id: current_user.id)
   end
 end

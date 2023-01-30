@@ -16,6 +16,7 @@ module EnglishDiaryApp
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join("config/locales/**/*.{rb,yml}")]
     config.time_zone = "Tokyo"
     # config.eager_load_paths << Rails.root.join("extras")
     config.active_storage.variant_processor = :mini_magick

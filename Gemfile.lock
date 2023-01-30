@@ -74,6 +74,7 @@ GEM
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.38.0)
       addressable
       matrix
@@ -91,6 +92,8 @@ GEM
       marcel (~> 1.0.0)
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
+    cocoon (1.2.15)
+    coderay (1.1.3)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     date (3.3.3)
@@ -126,6 +129,10 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jquery-rails (4.5.1)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
     json (2.6.3)
     loofah (2.19.1)
       crass (~> 1.0.2)
@@ -159,6 +166,14 @@ GEM
     parser (3.2.0.0)
       ast (~> 2.4.1)
     pg (1.4.5)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.10.1)
+      byebug (~> 11.0)
+      pry (>= 0.13, < 0.15)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -304,13 +319,17 @@ DEPENDENCIES
   bootsnap
   capybara
   carrierwave
+  cocoon
   debug
   devise
   dotenv-rails
   importmap-rails
   jbuilder
+  jquery-rails
   mini_magick
   pg (~> 1.1)
+  pry-byebug
+  pry-rails
   puma (~> 5.0)
   rails (~> 7.0.1)
   rspec-rails (~> 6.0.0)

@@ -1,0 +1,29 @@
+<div class="index_container">
+  <h2><%= current_user.username %>さんの単語帳</h2>
+  <div class="diaries">
+    <% @words.each do |word| %>
+      <div class="word_container">
+        <div class="word_container_top">
+          <div class="created_at">
+            <%= word.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+          </div>
+          <div class="link">
+            <%= link_to "日記へ", diary_path(id: word.diary_id) %>
+          </div>
+        </div>
+        <div class="word">
+          <div class="japanese_word">
+            <%= word.japanese_word %>
+          </div>
+        </div>
+        <div class="english_word">
+          <%= word.english_word %>
+        </div>
+        <div class="link">
+          <%#= link_to "編集", edit_word_path(word.id) %>
+          <%= button_to "削除", word_path(word.id), { method: :delete, data: { confirm: "本当に削除しますか？" }, class: "word_button" } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
