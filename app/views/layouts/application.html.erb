@@ -31,8 +31,14 @@
         </ul>
       </nav>
     </header>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id="message">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
+    </div>
     <div id="main_wrapper">
       <% if user_signed_in? %>
         <aside id="sidebar">
