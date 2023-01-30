@@ -32,10 +32,8 @@
       </nav>
     </header>
     <div id="message">
-      <% if notice %>
+      <% if notice or alert %>
         <p class="notice"><%= notice %></p>
-      <% end %>
-      <% if alert %>
         <p class="alert"><%= alert %></p>
       <% end %>
     </div>
