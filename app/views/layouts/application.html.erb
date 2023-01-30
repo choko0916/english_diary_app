@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/@oddcamp/cocoon-vanilla-js@1.1.3/index.min.js' %>
@@ -16,9 +15,11 @@
       <nav id="global_navi">
         <ul>
           <% if user_signed_in? %>
-            <li><% if current_user.avatar? %>
-              <%= image_tag current_user.avatar.url %>
-              <% end %></li>
+            <li>
+              <% if current_user.avatar? %>
+                <%= image_tag current_user.avatar.url %>
+              <% end %>
+            </li>
             <strong><%= link_to current_user.username, homes_show_path %></strong>
             <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
             <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
