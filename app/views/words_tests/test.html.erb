@@ -1,0 +1,17 @@
+<div class="index_container">
+  <h2><%= current_user.username %>さんの単語帳</h2>
+  <div class="words">
+    <% @words.each do |word| %>
+      <div class="word_container">
+        <div class="word">
+          <div class="japanese_word">
+            <%= word.japanese_word %>
+          </div>
+        </div>
+        <div class="english_word">
+          <%= word.english_word %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
