@@ -39,16 +39,7 @@
     </div>
     <div id="main_wrapper">
       <% if user_signed_in? %>
-        <aside id="sidebar">
-          <ul>
-            <li><%= link_to "トップへ",homes_show_path %></li>
-            <li><%= link_to "日記を投稿する", new_diary_path %></li>
-            <li><%= link_to "#{current_user.username}さんの日記一覧", diaries_path %></li>
-            <li><%= link_to "みんなの日記一覧", all_diaries_path %></li>
-            <li><%= link_to "#{current_user.username}さんの単語帳", words_path %></li>
-            <li><%#= link_to "みんなの単語帳", %></li>
-          </ul>
-        </aside>
+        <%= render "shared/sidebar" %>
       <% end %>
       <div id="main_area">
         <%= yield %>
