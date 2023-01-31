@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_31_224945) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_31_230915) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,6 +48,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_224945) do
     t.text "english_diary", null: false
     t.string "photo"
     t.boolean "private_flag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exam_questions", force: :cascade do |t|
+    t.integer "exam_id", null: false
+    t.integer "word_id", null: false
+    t.boolean "is_correct", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
