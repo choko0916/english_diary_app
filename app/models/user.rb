@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :diaries, dependent: :destroy
   has_many :words, dependent: :destroy
+  has_many :exams, dependent: :destroy
   mount_uploader :avatar, AvatarUploader
 
   # Include default devise modules. Others available are:
