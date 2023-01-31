@@ -19,9 +19,11 @@
         <div class="english_word">
           <%= word.english_word %>
         </div>
-        <div class="memo">
-          <%= word.memo %>
-        </div>
+        <% if word.memo %>
+          <div class="memo">
+            <%= word.memo %>
+          </div>
+        <% end %>
         <div class="link">
           <%#= link_to "編集", edit_word_path(word.id) %>
           <%= button_to "削除", word_path(word.id), { method: :delete, data: { confirm: "本当に削除しますか？" }, class: "word_button" } %>
