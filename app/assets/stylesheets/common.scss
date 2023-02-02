@@ -86,8 +86,8 @@ header h1 {
 }
 
 #sidebar ul li {
-  display: inline-block;
-  width: 100%;
+  display: block;
+  max-width: 100%;
   padding: 20px 0px;
 }
 
