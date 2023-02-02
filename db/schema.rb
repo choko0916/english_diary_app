@@ -55,7 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_230915) do
   create_table "exam_questions", force: :cascade do |t|
     t.integer "exam_id", null: false
     t.integer "word_id", null: false
-    t.boolean "is_correct", null: false
+    t.boolean "is_correct"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
