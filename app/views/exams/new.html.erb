@@ -1,0 +1,9 @@
+<h1>Exams#new</h1>
+<p>Find me in app/views/exams/new.html.erb</p>
+<%= form_with model: @exam, url: exams_path do |f| %>
+<div class="field">
+  <%= f.submit "登録" %>
+</div>
+<% end %>
+
+<%= button_to "登録", exams_path, data: { turbo_method: :post } %>

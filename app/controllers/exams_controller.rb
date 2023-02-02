@@ -1,5 +1,10 @@
 class ExamsController < ApplicationController
-  def show; end
+  def new
+    @exam = Exam.new
+  end
 
-  def create; end
+  def create
+    exam = Exam.new(user: current_user)
+    exam.save!
+  end
 end
