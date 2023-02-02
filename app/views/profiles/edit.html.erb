@@ -1,32 +1,24 @@
 <div class="user_container">
   <div class="user_input_area">
     <h3>プロフィール編集</h3>
-
     <%= form_with model: @user, url: profiles_path do |f| %>
-
       <% if current_user.avatar? %>
       <% end %>
-
       <div class="field">
         <div><%= f.label :avatar, "アイコン画像" %></div>
         <div><%= f.file_field :avatar, class: "avatar" %></div>
       </div>
-
-
       <div class="field">
         <div><%= f.label :username, "ユーザーネーム" %></div>
         <div><%= f.text_field :username, class: "name" %></div>
       </div>
-
       <div class="field">
         <div><%= f.label :bio, "一言メッセージ" %></div>
         <div><%= f.text_area :bio, class: "bio" %></div>
       </div>
-
       <div class="field">
         <div><%= f.submit "更新", class: "submit" %></div>
       </div>
-
     <% end %>
   </div>
 </div>
