@@ -1,8 +1,10 @@
-<div class="container">
-  <h3>単語テスト</h3>
-  <%= form_with model: @exam, url: exams_path do |f| %>
-  <div class="field">
-    <%= f.submit "テスト開始" %>
+<div class="short_container">
+  <div class="container">
+    <h3>単語テスト</h3>
+    <%= form_with model: @exam, url: exams_path do |f| %>
+    <div class="field">
+      <%= f.submit "テスト開始" %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
