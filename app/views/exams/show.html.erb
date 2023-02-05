@@ -3,17 +3,19 @@
     <p class="correct_answers">
       10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
     </p>
-    <div class="correct_answers_list">
-      <h3>正解</h3>
-      <% @correct_answers.each do |correct| %>
-        <p><%= correct.word.japanese_word %>：<%= correct.word.english_word %></p>
-      <% end %>
-    </div>
-    <div class="wrong_answers_list">
-      <h3>不正解</h3>
-      <% @wrong_answers.each do |wrong| %>
-        <p><%= wrong.word.japanese_word %>：<%= wrong.word.english_word %></p>
-      <% end %>
+    <div class="answers_list">
+      <div class="correct_answers_list">
+        <h3>正解</h3>
+        <% @correct_answers.each do |correct| %>
+          <p><%= correct.word.japanese_word %>：<%= correct.word.english_word %></p>
+        <% end %>
+      </div>
+      <div class="wrong_answers_list">
+        <h3>不正解</h3>
+        <% @wrong_answers.each do |wrong| %>
+          <p><%= wrong.word.japanese_word %>：<%= wrong.word.english_word %></p>
+        <% end %>
+      </div>
     </div>
     <ul class="result_links">
       <li><%= link_to "もう一度単語テストをする", new_exam_path %></li>
