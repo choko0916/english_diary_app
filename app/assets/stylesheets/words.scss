@@ -36,6 +36,7 @@
 
 .result_links {
   list-style: none;
+  padding-left: 15px;
 }
 
 .result_links li {
@@ -47,6 +48,10 @@
 }
 
 .correct_answers_list {
+  padding-bottom: 25px;
+}
+
+.wrong_answers_list {
   padding-bottom: 25px;
 }
 
