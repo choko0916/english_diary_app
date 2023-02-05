@@ -1,10 +1,12 @@
 <div class="short_container">
   <div class="container">
     <h3>テスト結果</h3>
-    <div class="field">
       <p class="correct_answers">
         10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
       </p>
-    </div>
+      <ul class="result_links">
+        <li><%= link_to "もう一度単語テストをする", new_exam_path %></li>
+        <li><%= link_to "単語帳へ", words_path %></li>
+      </ul>
   </div>
 </div>
