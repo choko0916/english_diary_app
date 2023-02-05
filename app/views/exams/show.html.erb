@@ -2,7 +2,9 @@
   <div class="container">
     <h3>正答率</h3>
     <div class="field">
-      <p><%= @correct_answers.size %>/10</p>
+      <p class="correct_answers">
+        10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
+      </p>
     </div>
   </div>
 </div>
