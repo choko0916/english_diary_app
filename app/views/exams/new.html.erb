@@ -3,7 +3,7 @@
     <h3 class="exam">単語テスト<span>10問</span></h3>
     <%= form_with model: @exam, url: exams_path do |f| %>
     <div class="field">
-      <%= f.submit "テスト開始" %>
+      <%= f.submit "テスト開始", class:"submit" %>
     </div>
     <% end %>
   </div>
