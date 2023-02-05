@@ -1,4 +1,9 @@
 class ExamsController < ApplicationController
+  def show
+    @exam = Exam.find(params[:id])
+    @correct_answers = @exam.exam_questions.where(is_correct: true)
+  end
+
   def new
     @exam = Exam.new
   end
