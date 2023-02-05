@@ -1,15 +1,17 @@
 <div class="short_container">
-  <h1>単語テスト</h1>
-
-  <%= @exam_question.word.japanese_word %>の英語訳は？
-
-  <%= form_with model: @exam_question, url: exam_question_path do |f| %>
-    <div class="field">
-      <%= f.label :english_word, "単語、フレーズ（英語）", class:"bold" %><br>
-      <%= f.text_field :english_word, class:"text_field", placeholder: "apple" %>
+  <h2>単語テスト</h2>
+  <div class="container">
+    <div class="exam_area">
+      <p><span>「<%= @exam_question.word.japanese_word %>」</span>の英語訳は？</p>
+      <%= form_with model: @exam_question, url: exam_question_path do |f| %>
+      <div class="field">
+        <%= f.label :english_word, "回答", class:"answer" %>：
+        <%= f.text_field :english_word, class:"text_field", placeholder: "apple" %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.submit "次へ" %>
-    </div>
-  <% end %>
+      <div class="field">
+        <%= f.submit "次へ", class:"submit" %>
+      </div>
+    <% end %>
+  </div>
 </div>
