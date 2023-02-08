@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #262338;
+  font-size: 14px;
+  background-color: rgb(247, 247, 252);
+}
+
+a {
+  color: #262338;
+}
+
+a:visited {
+  color: #262338;
+}
+
+a:hover {
+  color: #262338;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
+h2 {
+  padding-left: 30px;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+header {
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #f8b042;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 5px 0 10px;
+}
+
+#message p {
+  color: white;
+  background-color: #ec6a52;
+  margin: 0;
+  padding: 2px 15px;
+}
+
+#global_navi {
+  margin-bottom: 16px;
+}
+
+#global_navi ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#global_navi ul li {
+  display: inline-block;
+}
+
+#main_wrapper {
+  display: flex;
+}
+
+#main_area {
+  width: 82%;
+}
+
+#sidebar {
+  width: 18%;
+  background-color: white;
+  border-right: 1px solid rgb(221, 220, 220);
+}
+
+#sidebar ul {
+  position: fixed;
+}
+
+#sidebar ul li {
+  display: block;
+  max-width: 100%;
+  padding: 20px 0px;
+}
+
+footer {
+  text-align: center;
+  background-color: #f8b042;
+  margin-bottom: 0;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  background-color: white;
+  width: 550px;
+  padding: 15px 25px;
+  margin: 25px auto;
+}
+
+.container_top {
+  display: flex;
+}
+
+.created_at {
+  color: rgb(124, 121, 121);
+  padding-right: 15px;
+}
+
+.short_container {
+  height: 670px;
+}
+
+.submit {
+  background-color: #ec6a52;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 10px;
+}
