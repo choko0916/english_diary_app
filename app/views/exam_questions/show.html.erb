@@ -6,7 +6,7 @@
       <%= form_with model: @exam_question, url: exam_question_path do |f| %>
       <div class="field">
         <%= f.label :english_word, "回答", class:"answer" %>：
-        <%= f.text_field :english_word, class:"text_field", placeholder: "apple" %>
+        <%= f.text_field :english_word, autocomplete:"off", class:"text_field", placeholder: "apple" %>
       </div>
     </div>
       <div class="field">
