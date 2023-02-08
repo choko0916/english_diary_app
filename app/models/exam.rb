@@ -1,5 +1,4 @@
-class Word < ApplicationRecord
+class Exam < ApplicationRecord
   belongs_to :user
-  belongs_to :diary
   has_many :exam_questions, dependent: :destroy
 end

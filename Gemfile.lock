@@ -96,6 +96,8 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.2)
+      railties (>= 6.0.0)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
@@ -115,6 +117,10 @@ GEM
     ffi (1.15.5)
     globalid (1.0.1)
       activesupport (>= 5.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -320,9 +326,11 @@ DEPENDENCIES
   capybara
   carrierwave
   cocoon
+  cssbundling-rails
   debug
   devise
   dotenv-rails
+  hotwire-rails (~> 0.1.3)
   importmap-rails
   jbuilder
   jquery-rails

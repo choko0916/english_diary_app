@@ -2,8 +2,8 @@
   <h2>日記一覧</h2>
   <div class="diaries">
     <% @diaries.each do |diary| %>
-      <div class="diary_container">
-        <div class="diary_container_top">
+      <div class="container">
+        <div class="container_top">
           <% if diary.user.avatar? %>
             <div class="avatar">
               <%= image_tag diary.user.avatar.url %>

@@ -1,0 +1,38 @@
+<div class="container">
+  <h3>テスト結果</h3>
+    <p class="correct_answers">
+      10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
+    </p>
+    <div class="answers_list">
+      <div class="correct_answers_lists">
+        <h3>正解</h3>
+        <% @correct_answers.each do |correct| %>
+          <div class="correct_answers_list">
+            <p><%= correct.word.japanese_word %>：  <%= correct.word.english_word %></p>
+            <% if correct.word.memo.present? %>
+              <div class="memo_field">
+                ★<%= correct.word.memo %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="wrong_answers_lists">
+        <h3>不正解</h3>
+        <% @wrong_answers.each do |wrong| %>
+          <div class="wrong_answers_list">
+            <p><%= wrong.word.japanese_word %>：  <%= wrong.word.english_word %></p>
+            <% if wrong.word.memo.present? %>
+              <div class="memo_field">
+                ★<%= wrong.word.memo %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <ul class="result_links">
+      <li><%= link_to "もう一度単語テストをする", new_exam_path %></li>
+      <li><%= link_to "単語帳へ", words_path %></li>
+    </ul>
+</div>

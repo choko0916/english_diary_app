@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :diaries
   resources :all_diaries, only: [:index]
   resources :words
+  resources :exams, only: [:show, :new, :create]
+  resources :exam_questions, only: [:show, :update]
+  get "words_tests/test"
   devise_for :users, controllers: {
     registrations: "users/registrations",
     sessions: "users/sessions"
