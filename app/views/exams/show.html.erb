@@ -4,26 +4,30 @@
       10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
     </p>
     <div class="answers_list">
-      <div class="correct_answers_list">
+      <div class="correct_answers_lists">
         <h3>正解</h3>
         <% @correct_answers.each do |correct| %>
-          <p><%= correct.word.japanese_word %>：<%= correct.word.english_word %></p>
-          <% if correct.word.memo %>
-            <div class="memo">
-              <%= correct.word.memo %>
-            </div>
-          <% end %>
+          <div class="correct_answers_list">
+            <p><%= correct.word.japanese_word %>：  <%= correct.word.english_word %></p>
+            <% if correct.word.memo %>
+              <div class="memo_field">
+                ★<%= correct.word.memo %>
+              </div>
+            <% end %>
+          </div>
         <% end %>
       </div>
-      <div class="wrong_answers_list">
+      <div class="wrong_answers_lists">
         <h3>不正解</h3>
         <% @wrong_answers.each do |wrong| %>
-          <p><%= wrong.word.japanese_word %>：<%= wrong.word.english_word %></p>
-          <% if wrong.word.memo %>
-            <div class="memo">
-              <%= wrong.word.memo %>
-            </div>
-          <% end %>
+          <div class="wrong_answers_list">
+            <p><%= wrong.word.japanese_word %>：  <%= wrong.word.english_word %></p>
+            <% if wrong.word.memo %>
+              <div class="memo_field">
+                ★<%= wrong.word.memo %>
+              </div>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>
