@@ -9,7 +9,7 @@
         <% @correct_answers.each do |correct| %>
           <div class="correct_answers_list">
             <p><%= correct.word.japanese_word %>：  <%= correct.word.english_word %></p>
-            <% if correct.word.memo %>
+            <% if correct.word.memo.present? %>
               <div class="memo_field">
                 ★<%= correct.word.memo %>
               </div>
@@ -22,7 +22,7 @@
         <% @wrong_answers.each do |wrong| %>
           <div class="wrong_answers_list">
             <p><%= wrong.word.japanese_word %>：  <%= wrong.word.english_word %></p>
-            <% if wrong.word.memo %>
+            <% if wrong.word.memo.present? %>
               <div class="memo_field">
                 ★<%= wrong.word.memo %>
               </div>
