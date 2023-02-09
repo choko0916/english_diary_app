@@ -20,24 +20,22 @@
           </svg>
         </button>
       </div>
-      <nav id="global_navi">
-        <ul>
-          <% if user_signed_in? %>
-            <li>
-              <% if current_user.avatar? %>
-                <%= image_tag current_user.avatar.url %>
-              <% end %>
-            </li>
-            <strong><%= link_to current_user.username, homes_show_path %></strong>
-            <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
-            <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "サインアップ", new_user_registration_path %></li>
-            <li><%= link_to "ログイン", new_user_session_path %></li>
-            <li><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
-          <% end %>
-        </ul>
-      </nav>
+      <ul>
+        <% if user_signed_in? %>
+          <li>
+            <% if current_user.avatar? %>
+              <%= image_tag current_user.avatar.url %>
+            <% end %>
+          </li>
+          <strong><%= link_to current_user.username, homes_show_path %></strong>
+          <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
+          <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "サインアップ", new_user_registration_path %></li>
+          <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
+        <% end %>
+      </ul>
     </header>
     <div id="message">
       <% if notice or alert %>
