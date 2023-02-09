@@ -27,7 +27,7 @@
               <%= image_tag current_user.avatar.url %>
             <% end %>
           </li>
-          <strong><%= link_to current_user.username, homes_show_path %></strong>
+          <li><%= link_to current_user.username, homes_show_path %></li>
           <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
           <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% else %>
