@@ -32,11 +32,11 @@
             </li>
             <li class="block px-8 py-2 border-b md:border-none"><%= link_to current_user.username, homes_show_path %></li>
             <li class="block px-8 py-2 border-b md:border-none"><%= link_to "プロフィール変更", edit_profiles_path %></li>
-            <li class="block px-8 py-2"><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <li class="block px-8 py-2 text-black hover:font-bold"><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li class="block px-8 py-2 border-b md:border-none"><%= link_to "サインアップ", new_user_registration_path %></li>
             <li class="block px-8 py-2 border-b md:border-none"><%= link_to "ログイン", new_user_session_path %></li>
-            <li class="block px-8 py-2><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
+            <li class="block px-8 py-2 text-black hover:font-bold"><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
           <% end %>
         </ul>
       </div>
