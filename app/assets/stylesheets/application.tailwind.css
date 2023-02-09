@@ -46,8 +46,6 @@ header {
   padding: 0 15px;
   background-color: #f8b042;
   color: white;
-  display: flex;
-  justify-content: space-between;
 }
 
 header h1 {
