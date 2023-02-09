@@ -58,20 +58,6 @@ header h1 {
   padding: 2px 15px;
 }
 
-#global_navi {
-  margin-bottom: 16px;
-}
-
-#global_navi ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#global_navi ul li {
-  display: inline-block;
-}
-
 #main_wrapper {
   display: flex;
 }
