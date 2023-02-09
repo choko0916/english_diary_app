@@ -25,18 +25,18 @@
       <div>
         <ul>
           <% if user_signed_in? %>
-            <li>
+            <li class="block px-8 py-2">
               <% if current_user.avatar? %>
                 <%= image_tag current_user.avatar.url %>
               <% end %>
             </li>
-            <li><%= link_to current_user.username, homes_show_path %></li>
-            <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
-            <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <li class="block px-8 py-2"><%= link_to current_user.username, homes_show_path %></li>
+            <li class="block px-8 py-2"><%= link_to "プロフィール変更", edit_profiles_path %></li>
+            <li class="block px-8 py-2"><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to "サインアップ", new_user_registration_path %></li>
-            <li><%= link_to "ログイン", new_user_session_path %></li>
-            <li><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
+            <li class="block px-8 py-2"><%= link_to "サインアップ", new_user_registration_path %></li>
+            <li class="block px-8 py-2"><%= link_to "ログイン", new_user_session_path %></li>
+            <li class="block px-8 py-2"><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
           <% end %>
         </ul>
       </div>
