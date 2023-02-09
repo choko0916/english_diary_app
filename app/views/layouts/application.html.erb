@@ -11,31 +11,35 @@
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/@oddcamp/cocoon-vanilla-js@1.1.3/index.min.js' %>
   </head>
   <body>
-    <header class="flex justify-between items-center text-white">
-      <h1 class="text-2xl font-semibold">English Diary</h1>
-      <div>
-        <button>
-          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
-          </svg>
-        </button>
+    <header class="text-white">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-semibold">English Diary</h1>
+        <div>
+          <button>
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+            </svg>
+          </button>
+        </div>
       </div>
-      <ul>
-        <% if user_signed_in? %>
-          <li>
-            <% if current_user.avatar? %>
-              <%= image_tag current_user.avatar.url %>
-            <% end %>
-          </li>
-          <li><%= link_to current_user.username, homes_show_path %></li>
-          <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
-          <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "サインアップ", new_user_registration_path %></li>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
-          <li><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
-        <% end %>
-      </ul>
+      <div>
+        <ul>
+          <% if user_signed_in? %>
+            <li>
+              <% if current_user.avatar? %>
+                <%= image_tag current_user.avatar.url %>
+              <% end %>
+            </li>
+            <li><%= link_to current_user.username, homes_show_path %></li>
+            <li><%= link_to "プロフィール変更", edit_profiles_path %></li>
+            <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "サインアップ", new_user_registration_path %></li>
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+            <li><%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %></li>
+          <% end %>
+        </ul>
+      </div>
     </header>
     <div id="message">
       <% if notice or alert %>
