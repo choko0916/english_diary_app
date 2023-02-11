@@ -155,12 +155,6 @@ footer {
   color: #ec6a52;
 }
 
-.correct_answers:hover {
-  background-color: #f33311;
-  color: white;
-  font-weight: 700;
-}
-
 .correct_answers span {
   padding: 15px;
   font-size: 35px;
