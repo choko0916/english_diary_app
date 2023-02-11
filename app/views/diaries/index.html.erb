@@ -30,7 +30,7 @@
             </div>
           <% end %>
         </div>
-        <div class="link">
+        <div class="link text-end">
           <%= link_to "編集", edit_diary_path(diary.id) %>
           <%= button_to "削除", diary_path(diary.id), form: { data: { turbo_confirm: "本当に削除しますか？" } }, method: :delete %>
         </div>
