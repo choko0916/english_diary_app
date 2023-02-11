@@ -34,7 +34,7 @@
                 </svg>
               <% end %>
             </li>
-            <li class="block px-8 py-2 border-b md:border-none"><%= link_to current_user.username, homes_show_path %></li>
+            <li class="block px-8 py-2 border-b md:border-none"><%= link_to "ホーム", homes_show_path %></li>
             <li class="block px-8 py-2 border-b md:border-none"><%= link_to "プロフィール変更", edit_profiles_path %></li>
             <li class="block px-8 py-2 text-black hover:font-bold"><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           <% else %>
