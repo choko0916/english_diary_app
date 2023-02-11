@@ -13,11 +13,11 @@
             <%= word.japanese_word %>
           </div>
         </div>
-        <div class="english_word border-b">
+        <div class="english_word">
           <%= word.english_word %>
         </div>
-        <% if word.memo %>
-          <div class="memo pt-3">
+        <% if word.memo.present? %>
+          <div class="memo pt-3 border-t">
             <%= word.memo %>
           </div>
         <% end %>
