@@ -8,9 +8,11 @@
     <%= f.label :english_word, "単語、フレーズ（英語）", class:"bold" %><br>
     <%= f.text_field :english_word, class:"text_field", placeholder: "apple" %>
   </div>
-  <div class="field py-6">
+  <div class="field pt-6">
     <%= f.label :memo, "メモ", class:"bold" %><br>
     <%= f.text_area :memo, placeholder: "可算名詞" %>
   </div>
+  <div class="field py-6 border-b">
   <%= link_to_remove_association "削除", f %>
+  </div>
 </div>
