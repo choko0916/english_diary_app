@@ -2,8 +2,11 @@
   <div class="user_input_area">
     <h3 class="font-semibold">プロフィール編集</h3>
     <%= form_with model: @user, url: profiles_path do |f| %>
-      <% if current_user.avatar? %>
-      <% end %>
+      <div class="field mt-3">
+        <% if current_user.avatar? %>
+          <%= image_tag current_user.avatar.url %>
+        <% end %>
+      </div>
       <div class="field mt-3">
         <div><%= f.label :avatar, "アイコン画像" %></div>
         <div><%= f.file_field :avatar, class: "avatar" %></div>
