@@ -122,17 +122,6 @@ footer {
   border-radius: 3px;
   padding: 3px 10px;
 }
-.japanese_word {
-  padding: 15px 0;
-}
-
-.english_word {
-  padding-bottom: 15px;
-}
-
-.memo {
-  padding-bottom: 15px;
-}
 
 .word_button {
   background-color: #ec6a52;
