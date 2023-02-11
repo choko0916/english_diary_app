@@ -103,6 +103,12 @@ footer {
   padding: 3px 10px;
 }
 
+.submit:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
+}
+
 .avatar {
   padding-right: 15px;
 }
@@ -123,6 +129,12 @@ footer {
   padding: 3px 10px;
 }
 
+.diary_destroy_button:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
+}
+
 .word_button {
   background-color: #ec6a52;
   color: white;
@@ -131,10 +143,22 @@ footer {
   padding: 3px 10px;
 }
 
+.word_button:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
+}
+
 .correct_answers {
   font-size: 75px;
   text-align: center;
   color: #ec6a52;
+}
+
+.correct_answers:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
 }
 
 .correct_answers span {
