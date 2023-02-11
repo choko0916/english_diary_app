@@ -2,7 +2,7 @@
   <h2><%= current_user.username %>さんの単語帳</h2>
   <div class="diaries">
     <% @words.each do |word| %>
-      <div class="shadow container">
+      <div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
         <div class="container_top">
           <div class="created_at">
             <%= word.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
