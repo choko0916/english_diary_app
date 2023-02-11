@@ -7,6 +7,12 @@
     <%= form.label :english_diary, "日記（英語）", class:"bold" %><br>
     <%= form.text_area :english_diary, class:"w-4/5 h-40", placeholder: "英語で日記を入力" %>
   </div>
+  <div class="pt-6">
+    <%= link_to_add_association "単語、フレーズの追加", form, :words, data: { association_insertion_method: "append" }, class:"px-6 py-2 bg-gray-300 hover:bg-gray-400 rounded" %>
+    <%= form.fields_for :words do |word| %>
+      <%= render "diaries/word_fields", f: word %>
+    <% end %>
+  </div>
   <div class="field py-6 border-b">
     <%= form.label :photo, "写真", class:"bold" %><br>
     <%= form.file_field :photo, class:"input_field" %>
@@ -14,12 +20,6 @@
   <div class="field flex py-6 border-b">
     <%= form.label :private_flag, "非公開にする", class:"pr-3" %>
     <%= form.check_box :private_flag %>
-  </div>
-  <div class="pt-6">
-    <%= link_to_add_association "単語、フレーズの追加", form, :words, data: { association_insertion_method: "append" }, class:"px-6 py-2 bg-gray-300 hover:bg-gray-400 rounded" %>
-    <%= form.fields_for :words do |word| %>
-      <%= render "diaries/word_fields", f: word %>
-    <% end %>
   </div>
   <div class="field pt-6 text-end">
     <%= form.submit "登録", class: "submit" %>
