@@ -4,11 +4,11 @@
   <%= form_with model: @diary do |f| %>
     <div class="field">
       <%= f.label :japanese_diary, "日記（日本語）", class:"bold" %><br>
-      <%= f.text_area :japanese_diary, class:"wide_field", placeholder: "日本語で日記を入力" %>
+      <%= f.text_area :japanese_diary, class:"w-4/5 h-40", placeholder: "日本語で日記を入力" %>
     </div> 
     <div class="field">
       <%= f.label :english_diary, "日記（英語）", class:"bold" %><br>
-      <%= f.text_area :english_diary, class:"wide_field", placeholder: "英語で日記を入力" %>
+      <%= f.text_area :english_diary, class:"w-4/5 h-40", placeholder: "英語で日記を入力" %>
     </div>
     <div class="field">
       <%= f.label :photo, "写真", class:"bold" %><br>
