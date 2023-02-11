@@ -15,7 +15,7 @@
     <%= form.label :private_flag, "非公開にする", class:"bold" %><br>
     <%= form.check_box :private_flag, class:"input_field" %>
   </div>
-  <div class="pt-6" id="words">
+  <div class="pt-6">
     <%= link_to_add_association "単語、フレーズの追加", form, :words, data: { association_insertion_method: "append" }, class:"border-b" %>
     <%= form.fields_for :words do |word| %>
       <%= render "diaries/word_fields", f: word %>
