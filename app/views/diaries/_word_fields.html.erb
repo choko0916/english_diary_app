@@ -1,14 +1,14 @@
 <div class="nested-fields">
   <%= f.hidden_field :user_id, value: current_user.id %>
-  <div class="field">
+  <div class="field pt-6">
     <%= f.label :japanese_word, "単語、フレーズ（日本語）", class:"bold" %><br>
     <%= f.text_field :japanese_word, class:"text_field", placeholder: "りんご" %>
   </div> 
-  <div class="field">
+  <div class="field pt-6">
     <%= f.label :english_word, "単語、フレーズ（英語）", class:"bold" %><br>
     <%= f.text_field :english_word, class:"text_field", placeholder: "apple" %>
   </div>
-  <div class="field">
+  <div class="field py-6">
     <%= f.label :memo, "メモ", class:"bold" %><br>
     <%= f.text_area :memo, placeholder: "可算名詞" %>
   </div>
