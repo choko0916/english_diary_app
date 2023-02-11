@@ -58,10 +58,6 @@ header h1 {
   padding: 2px 15px;
 }
 
-#main_wrapper {
-  display: flex;
-}
-
 #main_area {
   width: 82%;
 }
