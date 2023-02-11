@@ -86,13 +86,6 @@ footer {
   padding: 10px 0;
 }
 
-.container {
-  background-color: white;
-  width: 550px;
-  padding: 15px 25px;
-  margin: 25px auto;
-}
-
 .container_top {
   display: flex;
 }
