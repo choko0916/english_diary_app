@@ -171,14 +171,14 @@ footer {
 }
 
 .correct_answers {
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   color: #ec6a52;
 }
 
 .correct_answers span {
   padding: 15px;
-  font-size: 35px;
+  font-size: 25px;
   color: #262338;
 }
 
