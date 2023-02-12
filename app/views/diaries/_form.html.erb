@@ -1,11 +1,11 @@
 <%= form_with model: model do |form| %>
   <div class="field pt-6">
     <%= form.label :japanese_diary, "日記（日本語）", class:"bold" %><br>
-    <%= form.text_area :japanese_diary, class:"w-4/5 h-40", placeholder: "日本語で日記を入力" %>
+    <%= form.text_area :japanese_diary, class:"w-4/5 h-40 rounded", placeholder: "日本語で日記を入力" %>
   </div> 
   <div class="field pb-3">
     <%= form.label :english_diary, "日記（英語）", class:"bold" %><br>
-    <%= form.text_area :english_diary, class:"w-4/5 h-40", placeholder: "英語で日記を入力" %>
+    <%= form.text_area :english_diary, class:"w-4/5 h-40 rounded", placeholder: "英語で日記を入力" %>
   </div>
   <div class="py-6 border-b">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="inline w-6 h-6">

@@ -2,15 +2,15 @@
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="field pt-6">
     <%= f.label :japanese_word, "単語、フレーズ（日本語）", class:"bold" %><br>
-    <%= f.text_field :japanese_word, class:"w-4/5 h-5/6", placeholder: "りんご" %>
+    <%= f.text_field :japanese_word, class:"w-4/5 h-5/6 rounded", placeholder: "りんご" %>
   </div> 
   <div class="field pt-6">
     <%= f.label :english_word, "単語、フレーズ（英語）", class:"bold" %><br>
-    <%= f.text_field :english_word, class:"w-4/5", placeholder: "apple" %>
+    <%= f.text_field :english_word, class:"w-4/5 rounded", placeholder: "apple" %>
   </div>
   <div class="field pt-6">
     <%= f.label :memo, "メモ", class:"bold" %><br>
-    <%= f.text_area :memo, class:"w-4/5 h-40", placeholder: "可算名詞" %>
+    <%= f.text_area :memo, class:"w-4/5 h-40 rounded", placeholder: "可算名詞" %>
   </div>
   <div class="field py-6 text-end">
     <%= link_to_remove_association "削除", f %>
