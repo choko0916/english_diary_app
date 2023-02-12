@@ -42,13 +42,38 @@ img {
 }
 
 header {
-  margin: 0 auto;
-  padding: 0 15px;
   background-color: #f8b042;
 }
 
-header h1 {
-  margin: 5px 0 10px;
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay.show {
+  opacity: 1;
 }
 
 #message p {
