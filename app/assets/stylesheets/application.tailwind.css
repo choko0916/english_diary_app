@@ -45,9 +45,6 @@ header {
   margin: 0 auto;
   padding: 0 15px;
   background-color: #f8b042;
-  color: white;
-  display: flex;
-  justify-content: space-between;
 }
 
 header h1 {
@@ -59,24 +56,6 @@ header h1 {
   background-color: #ec6a52;
   margin: 0;
   padding: 2px 15px;
-}
-
-#global_navi {
-  margin-bottom: 16px;
-}
-
-#global_navi ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#global_navi ul li {
-  display: inline-block;
-}
-
-#main_wrapper {
-  display: flex;
 }
 
 #main_area {
@@ -96,7 +75,7 @@ header h1 {
 #sidebar ul li {
   display: block;
   max-width: 100%;
-  padding: 20px 0px;
+  padding: 20px;
 }
 
 footer {
@@ -105,13 +84,6 @@ footer {
   margin-bottom: 0;
   color: white;
   padding: 10px 0;
-}
-
-.container {
-  background-color: white;
-  width: 550px;
-  padding: 15px 25px;
-  margin: 25px auto;
 }
 
 .container_top {
@@ -123,16 +95,18 @@ footer {
   padding-right: 15px;
 }
 
-.short_container {
-  height: 670px;
-}
-
 .submit {
   background-color: #ec6a52;
   color: white;
   border: none;
   border-radius: 3px;
   padding: 3px 10px;
+}
+
+.submit:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
 }
 
 .avatar {
@@ -155,16 +129,10 @@ footer {
   padding: 3px 10px;
 }
 
-.japanese_word {
-  padding: 15px 0;
-}
-
-.english_word {
-  padding-bottom: 15px;
-}
-
-.memo {
-  padding-bottom: 15px;
+.diary_destroy_button:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
 }
 
 .word_button {
@@ -175,8 +143,14 @@ footer {
   padding: 3px 10px;
 }
 
+.word_button:hover {
+  background-color: #f33311;
+  color: white;
+  font-weight: 700;
+}
+
 .correct_answers {
-  font-size: 75px;
+  font-size: 100px;
   text-align: center;
   color: #ec6a52;
 }

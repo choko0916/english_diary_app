@@ -1,5 +1,5 @@
-<div class="container">
-  <h3>テスト結果</h3>
+<div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
+  <h1 class="font-semibold">テスト結果</h1>
     <p class="correct_answers">
       10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
     </p>
@@ -31,7 +31,7 @@
         <% end %>
       </div>
     </div>
-    <ul class="result_links">
+    <ul class="result_links text-end">
       <li><%= link_to "もう一度単語テストをする", new_exam_path %></li>
       <li><%= link_to "単語帳へ", words_path %></li>
     </ul>

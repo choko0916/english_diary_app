@@ -1,26 +1,24 @@
-<div class="index_container">
-  <h2>日記一覧</h2>
+<div class="my-8 index_container">
   <div class="diaries">
     <% @diaries.each do |diary| %>
-      <div class="container">
+      <div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
         <div class="container_top">
           <% if diary.user.avatar? %>
             <div class="avatar">
               <%= image_tag diary.user.avatar.url %>
             </div>
+            <% else %>
+              <div class="avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                  <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
           <% end %>
           <div class="username">
             <%= diary.user.username %>
           </div>
           <div class="created_at">
             <%= diary.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
-          </div>
-          <div class="private_flag">
-            <% if diary.private_flag == true %>
-              <p>非公開</p>
-            <% else %>
-              <p>公開</p>
-            <% end %>
           </div>
         </div>
         <div class="photo">
@@ -38,7 +36,7 @@
             </div>
           <% end %>
         </div>
-        <div class="link">
+        <div class="link text-end">
           <%= link_to "編集", edit_diary_path(diary.id) %>
         </div>
       </div>

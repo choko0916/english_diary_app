@@ -1,22 +1,29 @@
-<div class="container">
+<div class="bg-white shadow mx-auto my-8 p-6 w-8/12 rounded">
   <div class="user_input_area">
-    <h3>プロフィール編集</h3>
+    <h3 class="font-semibold">プロフィール編集</h3>
     <%= form_with model: @user, url: profiles_path do |f| %>
-      <% if current_user.avatar? %>
-      <% end %>
-      <div class="field">
+      <div class="field mt-3">
+        <% if current_user.avatar? %>
+          <%= image_tag current_user.avatar.url %>
+        <% else %>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-black w-12 h-12">
+            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+          </svg>
+        <% end %>
+      </div>
+      <div class="field mt-3">
         <div><%= f.label :avatar, "アイコン画像" %></div>
         <div><%= f.file_field :avatar, class: "avatar" %></div>
       </div>
-      <div class="field">
+      <div class="field mt-3">
         <div><%= f.label :username, "ユーザーネーム" %></div>
-        <div><%= f.text_field :username, class: "name" %></div>
+        <div><%= f.text_field :username, class: "name w-4/5" %></div>
       </div>
-      <div class="field">
+      <div class="field mt-3">
         <div><%= f.label :bio, "一言メッセージ" %></div>
-        <div><%= f.text_area :bio, class: "bio" %></div>
+        <div><%= f.text_area :bio, class: "bio w-4/5 h-5/6" %></div>
       </div>
-      <div class="field">
+      <div class="field mt-3 text-end">
         <div><%= f.submit "更新", class: "submit" %></div>
       </div>
     <% end %>

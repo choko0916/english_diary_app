@@ -1,15 +1,14 @@
 <div class="short_container">
-  <h2>単語テスト</h2>
-  <div class="container">
+  <div class="bg-white shadow mx-auto my-8 p-6 w-8/12 rounded">
     <div class="exam_area">
       <p><span>「<%= @exam_question.word.japanese_word %>」</span>の英語訳は？</p>
       <%= form_with model: @exam_question, url: exam_question_path do |f| %>
       <div class="field">
         <%= f.label :english_word, "回答", class:"answer" %>：
-        <%= f.text_field :english_word, autocomplete:"off", class:"text_field", placeholder: "apple" %>
+        <%= f.text_field :english_word, autocomplete:"off", class:"w-4/5 rounded", placeholder: "apple" %>
       </div>
     </div>
-      <div class="field">
+      <div class="field text-end">
         <%= f.submit "次へ", class:"submit" %>
       </div>
     <% end %>
