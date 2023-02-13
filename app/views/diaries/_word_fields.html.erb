@@ -1,11 +1,11 @@
 <div class="nested-fields">
   <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="field pt-6">
-    <%= f.label :japanese_word, "単語、フレーズ（日本語）", class:"bold" %><br>
+    <%= f.label :japanese_word, "単語、フレーズ（日本語）", class:"mr-2" %><span class="font-bold text-xs p-0.5 text-rose-500 bg-rose-100">必須</span><br>
     <%= f.text_field :japanese_word, class:"w-4/5 h-5/6 rounded", placeholder: "りんご" %>
   </div> 
   <div class="field pt-6">
-    <%= f.label :english_word, "単語、フレーズ（英語）", class:"bold" %><br>
+    <%= f.label :english_word, "単語、フレーズ（英語）", class:"mr-2" %><span class="font-bold text-xs p-0.5 text-rose-500 bg-rose-100">必須</span><br>
     <%= f.text_field :english_word, class:"w-4/5 rounded", placeholder: "apple" %>
   </div>
   <div class="field pt-6">

@@ -42,13 +42,55 @@ img {
 }
 
 header {
-  margin: 0 auto;
-  padding: 0 15px;
   background-color: #f8b042;
 }
 
-header h1 {
-  margin: 5px 0 10px;
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay li {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
 }
 
 #message p {
@@ -58,12 +100,8 @@ header h1 {
   padding: 2px 15px;
 }
 
-#main_area {
-  width: 82%;
-}
-
 #sidebar {
-  width: 18%;
+  width: 20%;
   background-color: white;
   border-right: 1px solid rgb(221, 220, 220);
 }
@@ -150,14 +188,14 @@ footer {
 }
 
 .correct_answers {
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   color: #ec6a52;
 }
 
 .correct_answers span {
   padding: 15px;
-  font-size: 35px;
+  font-size: 25px;
   color: #262338;
 }
 
