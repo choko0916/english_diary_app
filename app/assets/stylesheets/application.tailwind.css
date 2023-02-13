@@ -51,6 +51,10 @@ header {
   cursor: pointer;
 }
 
+.sp-menu #open.hide {
+  display: none;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -62,6 +66,7 @@ header {
   padding: 64px;
   opacity: 0;
   pointer-events: none;
+  transition: opacity .6s;
 }
 
 .overlay #close {
@@ -74,6 +79,18 @@ header {
 
 .overlay.show {
   opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay li {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
 }
 
 #message p {
