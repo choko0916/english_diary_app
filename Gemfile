@@ -74,6 +74,8 @@ group :development, :test do
   gem "rubocop-rspec", require: false
   gem "pry-rails"
   gem "pry-byebug"
+  gem "factory_bot_rails"
+  gem "faker"
 end
 
 group :development do
