@@ -18,7 +18,7 @@ class DiariesController < ApplicationController
 
   def create
     @diary = Diary.new(diary_params)
-    if @diary.save!
+    if @diary.save
       redirect_to diaries_path, notice: t(".diary_new_notice")
     else
       flash.now[:alert] = t(".diary_new_alert")

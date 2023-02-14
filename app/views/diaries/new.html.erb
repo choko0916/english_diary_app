@@ -1,3 +1,10 @@
+<% if @diary.errors.any? %>
+  <% @diary.errors.full_messages.each do |message| %>
+    <ul>
+      <li><%= message %></li>
+    </ul>
+  <% end %>
+<% end %>
 <div class="bg-white shadow mx-auto my-8 p-6 w-8/12 rounded">
   <h1 class="font-semibold text-base">日記投稿</h1>
   <%= render "diaries/form", model: @diary %>
