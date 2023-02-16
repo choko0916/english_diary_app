@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "日記投稿ページ" do
-  let!(:diary) { create(:diary) }
+  let(:diary) { create(:diary) }
 
   before do
     visit new_diary_path
@@ -10,13 +10,13 @@ RSpec.describe "日記投稿ページ" do
   it "必要項目（「日記（英語）」）を入力し、登録ボタンをクリックすると、ユーザーの日記一覧ページに移動すること" do
     fill_in "日記（英語）", with: english_diary
     click_on "登録"
-    expect(current_path).to eq diaries_path
+    expect(page).to have_current_path diaries_path, ignore_query: true
   end
 
   it "英語日記を入力せずに、登録ボタンをクリックすると、エラーメッセージが表示され、ページ遷移しないこと" do
     fill_in "日記（日本語）", with: japanese_diary
     click_on "登録"
-    expect(current_path).to eq new_diary_path
+    expect(page).to have_current_path new_diary_path, ignore_query: true
     expect(page).to have_content "※English diaryを入力してください"
   end
 
