@@ -10,7 +10,7 @@ RSpec.describe "日記投稿ページ" do
   it "必要項目（「日記（英語）」）を入力し、登録ボタンをクリックすると、ユーザーの日記一覧ページに移動すること" do
     fill_in "日記（英語）", with: english_diary
     click_on "登録"
-    expect(page).to have_current_path diaries_path, ignore_query: true
+    expect(page).to have_current_path diaries_path
   end
 
   # it "英語日記を入力せずに、登録ボタンをクリックすると、エラーメッセージが表示され、ページ遷移しないこと" do
