@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "日記投稿ページ" do
-  let!(:english_diary) { create(:english_diary) }
+  let!(:diary) { create(:diary) }
 
   before do
     visit new_diary_path
