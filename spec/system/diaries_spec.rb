@@ -13,6 +13,13 @@ RSpec.describe "日記投稿ページ" do
     expect(current_path).to eq diaries_path
   end
 
+  it "英語日記を入力せずに、登録ボタンをクリックすると、エラーメッセージが表示され、ページ遷移しないこと" do
+    fill_in "日記（日本語）", with: japanese_diary
+    click_on "登録"
+    expect(current_path).to eq new_diary_path
+    expect(page).to have_content "※English diaryを入力してください"
+  end
+
   # it "「単語、フレーズを追加する」ボタンを押すと、日本語・英語の単語、フレーズ入力欄、メモ入力欄がボタンを押した回数だけ表示されること" do
   # end
 
