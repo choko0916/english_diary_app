@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "AllDiaries" do
   describe "GET /index" do
     let!(:open_diaries) do
-      %w(10 20 30 40).map do |created_at|
-        create(:diary, private_flag: false, created_at: created_at)
+      %w[10 20 30 40].map do |created_at|
+        create(:diary, private_flag: false, created_at:)
       end
     end
     let(:private_diaries) { create_list(:diary, 4, private_flag: true) }
