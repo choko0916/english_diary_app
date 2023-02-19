@@ -13,7 +13,7 @@ RSpec.describe "AllDiaries" do
       get all_diaries_path
     end
 
-    it "returns http success"
+    it "returns http success" do
       expect(response).to have_http_status(:success)
     end
 
