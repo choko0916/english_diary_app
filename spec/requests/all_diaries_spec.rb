@@ -13,7 +13,8 @@ RSpec.describe "AllDiaries" do
       get all_diaries_path
     end
 
-    it "returns http success"       expect(response).to have_http_status(:success)
+    it "returns http success"
+      expect(response).to have_http_status(:success)
     end
 
     it "公開の日記が表示されていること" do
