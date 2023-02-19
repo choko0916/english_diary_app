@@ -22,6 +22,10 @@ RSpec.describe "AllDiaries" do
       expect(response.body).to include(open_diaries.second.english_diary)
     end
 
+    it "公開の日記がcreted_at（投稿日時）の降順に公開されていること" do
+      expect(response.body.index(open_diaries[0].english_diary)).to be > response.body.index(open_diaries[1].english_diary)
+    end
+
     it "非公開の日記が公開されていないこと" do
       expect(response.body).not_to include(private_diaries.first.english_diary)
       expect(response.body).not_to include(private_diaries.second.english_diary)
