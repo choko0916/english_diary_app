@@ -8,20 +8,6 @@ RSpec.describe "Words" do
     end
   end
 
-  describe "GET /create" do
-    it "returns http success" do
-      get "/words/create"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /update" do
-    it "returns http success" do
-      get "/words/update"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
   describe "GET /show" do
     it "returns http success" do
       get "/words/show"
@@ -32,13 +18,6 @@ RSpec.describe "Words" do
   describe "GET /edit" do
     it "returns http success" do
       get "/words/edit"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /destroy" do
-    it "returns http success" do
-      get "/words/destroy"
       expect(response).to have_http_status(:success)
     end
   end
