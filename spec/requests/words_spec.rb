@@ -11,7 +11,7 @@ RSpec.describe "Words" do
       get words_path
     end
 
-    it "ログインしている時、ログインユーザーの単語帳ページにアクセスできること" do
+    it "ログイン中に、自身の単語帳ページにアクセスできること" do
       expect(response).to have_http_status(:ok)
     end
 
