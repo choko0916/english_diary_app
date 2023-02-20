@@ -19,11 +19,13 @@ RSpec.describe "Words" do
     it "ログインユーザーが投稿した単語が表示されていること" do
       expect(response.body).to include(user_words.first.english_word)
       expect(response.body).to include(user_words.second.english_word)
+      expect(response.body).to include(user_words.last.english_word)
     end
 
     it "ログインユーザー以外が投稿した単語が表示されていないこと" do
       expect(response.body).not_to include(another_user_words.first.english_word)
       expect(response.body).not_to include(another_user_words.second.english_word)
+      expect(response.body).not_to include(another_user_words.last.english_word)
     end
   end
 end
