@@ -33,7 +33,7 @@ RSpec.describe "Diaries" do
     it "ユーザー以外の日記が公開されていないこと" do
       expect(response.body).not_to include(another_user_diaries.first.english_diary)
       expect(response.body).not_to include(another_user_diaries.second.english_diary)
-      expect(response.body).not_to include(another_user_diaries.second.english_diary)
+      expect(response.body).not_to include(another_user_diaries.last.english_diary)
     end
   end
 end
