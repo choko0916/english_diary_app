@@ -29,6 +29,10 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+
+require "devise"
+require File.expand_path("spec/support/controller_macros.rb")
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = Rails.root.join("spec/fixtures")
@@ -62,6 +66,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include FactoryBot::Syntax::Methods
+
+  config.include Devise::TestHelpers, type: :controller
+  config.include ControllerMacros, type: :controller
 
   config.before(:each, type: :system) do
     driven_by :rack_test
