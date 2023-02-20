@@ -3,8 +3,9 @@ require "rails_helper"
 RSpec.describe "Words" do
   describe "GET /index" do
     let!(:user) { create(:user) }
+    let!(:another_user) { create(:user) }
     let!(:user_words) { create_list(:word, 3, user_id: user.id) }
-    let!(:other_user_words) { create_list(:word, 3) }
+    let!(:another_user_words) { create_list(:word, 3, user_id: another_user.id) }
 
     before do
       sign_in user
@@ -21,8 +22,8 @@ RSpec.describe "Words" do
     end
 
     it "ログインユーザー以外が投稿した単語が表示されていないこと" do
-      expect(response.body).not_to include(other_user_words.first.english_word)
-      expect(response.body).not_to include(other_user_words.second.english_word)
+      expect(response.body).not_to include(another_user_words.first.english_word)
+      expect(response.body).not_to include(another_user_words.second.english_word)
     end
   end
 end
