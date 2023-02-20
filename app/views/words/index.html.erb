@@ -1,0 +1,33 @@
+<div class="index_container">
+  <h2 class="font-semibold"><%= current_user.username %>さんの単語帳</h2>
+  <div class="diaries">
+    <% @words.each do |word| %>
+      <div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
+        <div class="mb-3 container_top">
+          <div class="created_at">
+            <%= word.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+          </div>
+        </div>
+        <div class="word">
+          <div class="japanese_word">
+            <%= word.japanese_word %>
+          </div>
+        </div>
+        <div class="english_word mb-3">
+          <%= word.english_word %>
+        </div>
+        <% if word.memo.present? %>
+          <div class="memo pt-3 border-t">
+            <%= word.memo %>
+          </div>
+        <% end %>
+        <div class="link">
+          <%#= link_to "編集", edit_word_path(word.id) %>
+        </div>
+        <div class="link text-end">
+          <%= link_to "日記へ", diary_path(id: word.diary_id), class:"text-white px-2 py-1 bg-blue-300 hover:bg-blue-400 hover:text-white rounded" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
