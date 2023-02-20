@@ -69,10 +69,12 @@ group :development, :test do
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
+
   gem "pry-rails"
   gem "pry-byebug"
   gem "factory_bot_rails"
   gem "faker"
+  gem "rails-controller-testing"
 end
 
 group :development do
