@@ -31,7 +31,7 @@ RSpec.describe "Exams" do
       it "examsテーブルにデータが１件登録されること" do
         expect do
           post exams_path, params: { exam: exam1 }
-        end.to change(Exam, :count).from(0).to(1)
+        end.to change(Exam, :count).by(1)
       end
 
       it "テストページで、ログインユーザーが登録した単語から単語が一つ表示されること" do
