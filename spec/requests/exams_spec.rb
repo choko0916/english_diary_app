@@ -7,8 +7,6 @@ RSpec.describe "Exams" do
   let!(:user_word) { create(:word, user: login_user) }
   let(:another_user_word) { create(:word, user: another_user) }
   let!(:exam_question1) { create(:exam_question, exam: exam1, word: user_word) }
-  let!(:correct_exam_questions) { create_list(:exam_question, 5, is_correct: true, exam: exam1) }
-  let!(:wrong_exam_questions) { create_list(:exam_question, 5, is_correct: false, exam: exam1) }
 
   before do
     sign_in login_user
@@ -42,8 +40,11 @@ RSpec.describe "Exams" do
   end
 
   describe "GET /show" do
+    let!(:correct_exam_questions) { create_list(:exam_question, 5, is_correct: true, exam: exam1) }
+    let!(:wrong_exam_questions) { create_list(:exam_question, 5, is_correct: false, exam: exam1) }
+
     before do
-      get exam_question_path
+      get exam_path(exam1.id)
     end
 
     it "returns http success" do
@@ -51,13 +52,13 @@ RSpec.describe "Exams" do
     end
 
     it "単語テストで正解であった問題を取得できること" do
-      expect(response.body).to include(correct_exam_questions.english_words.first)
-      expect(response.body).to include(correct_exam_questions.english_words.last)
+      expect(response.body).to include(correct_exam_questions.first.word.english_word)
+      expect(response.body).to include(correct_exam_questions.last.word.english_word)
     end
 
     it "単語テストで不正解であった問題を取得できること" do
-      expect(response.body).to include(wrong_exam_questions.english_words.first)
-      expect(response.body).to include(correct_exam_questions.english_words.last)
+      expect(response.body).to include(wrong_exam_questions.first.word.english_word)
+      expect(response.body).to include(wrong_exam_questions.last.word.english_word)
     end
   end
 end
