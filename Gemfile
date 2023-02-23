@@ -72,9 +72,11 @@ group :development, :test do
 
   gem "pry-rails"
   gem "pry-byebug"
+
   gem "factory_bot_rails"
   gem "faker"
   gem "rails-controller-testing"
+  gem "database_cleaner"
 end
 
 group :development do
