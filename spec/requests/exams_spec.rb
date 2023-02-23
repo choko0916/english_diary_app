@@ -26,10 +26,11 @@ RSpec.describe "Exams" do
         expect(response).to have_http_status :found
       end
 
-      it "examsテーブルにデータが１件登録されること" do
+      it "リクエストが成功すると、examsテーブル、exam_questionsテーブルにデータが１件ずつ登録されること" do
         expect do
           post exams_path, params: { exam: exam1 }
-        end.to change(Exam, :count).by(1)
+        end.to change(Exam, :count).by(1).and change(ExamQuestion, :count).by(1)
+        binding.pry
       end
 
       it "テストページで、ログインユーザーが登録した単語から単語が一つ表示されること" do
