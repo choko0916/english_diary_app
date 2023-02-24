@@ -2,7 +2,7 @@
   <div class="diaries">
     <% @diaries.each do |diary| %>
       <div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
-        <div class="container_top">
+        <div class="container_top mb-3">
           <% if diary.user.avatar? %>
             <div class="avatar">
               <%= image_tag diary.user.avatar.url %>
