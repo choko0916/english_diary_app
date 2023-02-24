@@ -117,6 +117,7 @@ header {
 }
 
 .bottombar {
+  background-color: #f8b042;
   z-index: 100;
   position: fixed;
   bottom: 0;
