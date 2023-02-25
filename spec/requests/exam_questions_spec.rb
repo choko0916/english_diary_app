@@ -45,7 +45,6 @@ RSpec.describe "ExamQuestions" do
     context "単語テストでの回答が正解であれば" do
       it "is_correctカラムをtrueで上書きすること" do
         patch exam_question_path(exam3.exam_questions.last.id), params: { exam_question: { english_word: sample.english_word } }
-        binding.pry
         expect(exam3.exam_questions.last.reload.is_correct).to be true
       end
     end
