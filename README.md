@@ -21,7 +21,7 @@ English Diaryを利用し、みんなで英会話能力を向上させましょ�
 
 
 ## デモ
-#### 英語日記、調べたフレーズ投稿機能
+#### 英語日記、調べた単語・フレーズ投稿機能
 ![デモ１](https://user-images.githubusercontent.com/81918738/221407604-ad7991b9-0674-4cf8-ada4-f31b09d1dcd7.gif)<br><br><br>
 
 
