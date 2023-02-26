@@ -11,12 +11,21 @@
     </div>
     <div class="text-xl pl-8 font-semibold"><%= current_user.username %></div>
   </div>
-  <p class="className={`
-    mt-3 mb-12 font-bold tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500
-    bg-clip-text text-transparent text-center
-    `}">
-    <%= current_user.bio %>
-  </p>
+  <% if current_user.bio? %>
+    <p class="className={`
+      mt-3 mb-12 font-bold tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500
+      bg-clip-text text-transparent text-center
+      `}">
+        <%= current_user.bio %>
+    </p>
+  <% else %>
+    <p class="className={`
+      mt-3 mb-12 font-bold tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500
+      bg-clip-text text-transparent text-center
+      `}">
+        Let's do my best today again!
+    </p>
+  <% end %>
   <div class="flex justify-around">
     <div class="w-5/12 bg-pink-100 shadow my-3 p-3 rounded">
       <p class="font-semibold mb-3">現在の日記投稿継続日数</p>
