@@ -39,7 +39,7 @@
 * __インフラ__
   * __CircleCI__
   * __PostgreSQL 13.9__
-  * __AWS(S3,IAM)__ <br><br><br>
+  * __AWS(S3, IAM)__ <br><br><br>
 
 
 ## 機能
