@@ -1,11 +1,11 @@
 <div class="bg-white shadow mx-auto my-8 p-6 w-8/12 rounded">
   <p class="mb-3 text-xl">Hello, <span class="font-semibold"><%= current_user.username %></span>さん</p>
   <div class="flex justify-around">
-    <div class="w-5/12 shadow my-3 p-3 rounded">
+    <div class="w-5/12 bg-yellow-100 shadow my-3 p-3 rounded">
       <p class="font-semibold mb-3">日記総投稿回数</p>
       <p class="text-end"><span class="font-semibold text-2xl"><%= @posted_days.count %></span> 回</p>
     </div>
-    <div class="w-5/12 shadow my-3 p-3 rounded">
+    <div class="w-5/12 bg-green-100 shadow my-3 p-3 rounded">
       <p class="font-semibold mb-3">学んだ単語数</p>
       <p class="text-end"><span class="font-semibold text-2xl"><%= @number_of_words.count %></span> 個</p>
     </div>
