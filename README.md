@@ -1,3 +1,7 @@
+
+
+https://user-images.githubusercontent.com/81918738/221405254-be30e538-5430-48a9-b76a-6016161bb126.mov
+
 # English Diary
 
 ## English Diaryとは？
