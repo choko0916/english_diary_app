@@ -1,9 +1,15 @@
 require "rails_helper"
 
 RSpec.describe "Profiles" do
-  describe "GET /update" do
+  let(:login_user) { create(:user) }
+
+  before do
+    sign_in login_user
+  end
+
+  describe "GET /edit" do
     it "returns http success" do
-      get "/profiles/update"
+      get edit_profiles_path
       expect(response).to have_http_status(:success)
     end
   end

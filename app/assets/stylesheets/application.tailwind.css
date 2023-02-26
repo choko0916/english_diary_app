@@ -116,12 +116,25 @@ header {
   padding: 20px;
 }
 
+.bottombar {
+  background-color: #f8b042;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 footer {
   text-align: center;
   background-color: #f8b042;
   margin-bottom: 0;
   color: white;
   padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .container_top {
@@ -222,10 +235,6 @@ footer {
 
 .wrong_answers_list {
   padding-bottom: 25px;
-}
-
-.answers_list h3 {
-  border-bottom: 1px solid black;
 }
 
 .exam_area p {

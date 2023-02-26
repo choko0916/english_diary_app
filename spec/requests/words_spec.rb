@@ -2,44 +2,30 @@ require "rails_helper"
 
 RSpec.describe "Words" do
   describe "GET /index" do
-    it "returns http success" do
-      get "/words/index"
-      expect(response).to have_http_status(:success)
-    end
-  end
+    let!(:user) { create(:user) }
+    let!(:another_user) { create(:user) }
+    let!(:user_words) { create_list(:word, 3, user_id: user.id) }
+    let!(:another_user_words) { create_list(:word, 3, user_id: another_user.id) }
 
-  describe "GET /create" do
-    it "returns http success" do
-      get "/words/create"
-      expect(response).to have_http_status(:success)
+    before do
+      sign_in user
+      get words_path
     end
-  end
 
-  describe "GET /update" do
-    it "returns http success" do
-      get "/words/update"
-      expect(response).to have_http_status(:success)
+    it "ログイン中に、自身の単語帳ページにアクセスできること" do
+      expect(response).to have_http_status(:ok)
     end
-  end
 
-  describe "GET /show" do
-    it "returns http success" do
-      get "/words/show"
-      expect(response).to have_http_status(:success)
+    it "ログインユーザーが投稿した単語が表示されていること" do
+      expect(response.body).to include(user_words.first.english_word)
+      expect(response.body).to include(user_words.second.english_word)
+      expect(response.body).to include(user_words.last.english_word)
     end
-  end
 
-  describe "GET /edit" do
-    it "returns http success" do
-      get "/words/edit"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /destroy" do
-    it "returns http success" do
-      get "/words/destroy"
-      expect(response).to have_http_status(:success)
+    it "ログインユーザー以外が投稿した単語が表示されていないこと" do
+      expect(response.body).not_to include(another_user_words.first.english_word)
+      expect(response.body).not_to include(another_user_words.second.english_word)
+      expect(response.body).not_to include(another_user_words.last.english_word)
     end
   end
 end

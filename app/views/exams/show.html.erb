@@ -1,34 +1,58 @@
-<div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
-  <h1 class="font-semibold">テスト結果</h1>
+<div class="bg-white shadow mx-auto my-6 p-6 w-8/12 rounded">
+  <h1 class="font-semibold mb-3">テスト結果</h1>
     <p class="correct_answers">
       10<span>問中</span><%= @correct_answers.size %><span>問正解</span>
     </p>
     <div class="answers_list">
       <div class="correct_answers_lists">
-        <h3>正解</h3>
-        <% @correct_answers.each do |correct| %>
-          <div class="correct_answers_list mt-6">
-            <p><%= correct.word.japanese_word %>：  <%= correct.word.english_word %></p>
-            <% if correct.word.memo.present? %>
-              <div class="memo_field">
-                ★<%= correct.word.memo %>
-              </div>
+        <h3 class="font-semibold mt-3 mb-3 text-rose-600">正解</h3>
+        <table class="table-auto w-full">
+          <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+            <tr>
+              <th class="p-2 whitespace-nowrap text-left">日本語</th>
+              <th class="p-2 whitespace-nowrap text-left">英語</th>
+              <th class="p-2 whitespace-nowrap text-left">メモ</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm divide-y divide-gray-100">
+            <% @correct_answers.each do |correct| %>
+              <tr>
+                <td class="p-2 whitespace-nowrap"><%= correct.word.japanese_word %></td> 
+                <td class="p-2 whitespace-nowrap"><%= correct.word.english_word %></td>
+                  <% if correct.word.memo.present? %>
+                    <td class="p-2 whitespace-nowrap"><%= correct.word.memo %></td>
+                  <% else %>
+                    <td class="p-2 whitespace-nowrap">　　</td>
+                  <% end %>
+              </tr>
             <% end %>
-          </div>
-        <% end %>
+          </tbody>
+        </table>
       </div>
       <div class="wrong_answers_lists">
-        <h3>不正解</h3>
-        <% @wrong_answers.each do |wrong| %>
-          <div class="wrong_answers_list mt-6">
-            <p><%= wrong.word.japanese_word %>：  <%= wrong.word.english_word %></p>
-            <% if wrong.word.memo.present? %>
-              <div class="memo_field">
-                ★<%= wrong.word.memo %>
-              </div>
+        <h3 class="mt-6 mb-3 font-semibold text-blue-600">不正解</h3>
+        <table class="table-auto w-full">
+          <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+            <tr>
+              <th class="p-2 whitespace-nowrap text-left">日本語</th>
+              <th class="p-2 whitespace-nowrap text-left">英語</th>
+              <th class="p-2 whitespace-nowrap text-left">メモ</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm divide-y divide-gray-100">
+            <% @wrong_answers.each do |wrong| %>
+            <tr>
+              <td class="p-2 whitespace-nowrap"><%= wrong.word.japanese_word %></td> 
+              <td class="p-2 whitespace-nowrap"><%= wrong.word.english_word %></td>
+                <% if wrong.word.memo.present? %>
+                  <td class="p-2 whitespace-nowrap"><%= wrong.word.memo %></td>
+                <% else %>
+                  <td class="p-2 whitespace-nowrap">　　</td>
+                <% end %>
+            </tr>
             <% end %>
-          </div>
-        <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
     <ul class="result_links text-end">

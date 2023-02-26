@@ -54,6 +54,7 @@ jobs:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - run: bundle exec rake db:create
       - run: bundle exec rake db:migrate
+      - run: bundle exec rake assets:precompile
       # Rspec
       - run:
           name: Rspec
