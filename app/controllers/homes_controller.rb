@@ -3,7 +3,7 @@ class HomesController < ApplicationController
   def index; end
 
   def show
-    @posted_days = Diary.where(user_id: current_user.id)
-    @number_of_words = Word.where(user_id: current_user.id)
+    @diaries = Diary.where(user_id: current_user.id)
+    @words = Word.where(user_id: current_user.id)
   end
 end
