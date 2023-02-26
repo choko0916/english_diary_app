@@ -22,7 +22,8 @@ English Diaryを利用し、みんなで英会話能力を向上させましょ�
 
 ## デモ
 #### 英語日記、調べたフレーズ投稿機能
-![英語日記、単語登録](https://user-images.githubusercontent.com/81918738/221406791-f05c5cb5-9783-4338-bfb6-9dd8e60e5944.gif)
+![デモ１](https://user-images.githubusercontent.com/81918738/221407604-ad7991b9-0674-4cf8-ada4-f31b09d1dcd7.gif)
+
 
 * __ __<br>
 
@@ -69,26 +70,3 @@ $ docker-compose up -d
 $ docker-compose run web rails db:create
 $ docker-compose run web rails db:migrate
 $ docker-compose run web rails db:seed
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
