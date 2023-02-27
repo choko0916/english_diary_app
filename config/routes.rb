@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "homes#index"
-  get "homes/show"
+  root "homes#show"
+  get "homes/index"
   resource :profiles, only: [:edit, :update]
   resources :diaries
   resources :all_diaries, only: [:index]

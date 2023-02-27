@@ -30,7 +30,7 @@
                 </svg>
               <% end %>
             </li>
-            <li class="px-8 text-center"><%= link_to "ホーム", homes_show_path, class:"leading-10 block" %></li>
+            <li class="px-8 text-center"><%= link_to "ホーム", root_path, class:"leading-10 block" %></li>
             <li class="px-8"><%= link_to "プロフィール変更", edit_profiles_path, class:"leading-10 block" %></li>
             <li class="px-8 text-black hover:font-bold"><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:"leading-10 block" %></li>
           <% else %>
@@ -58,7 +58,7 @@
               </svg>
             <% end %>
           </li>
-          <li class="px-8 py-2"><%= link_to "ホーム", homes_show_path %></li>
+          <li class="px-8 py-2"><%= link_to "ホーム", root_path %></li>
           <li class="px-8 py-2"><%= link_to "プロフィール変更", edit_profiles_path %></li>
           <li class="px-8 py-2 text-black hover:font-bold"><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% else %>
