@@ -28,8 +28,8 @@
   <% end %>
   <div>
     <div class="bg-yellow-100 shadow my-3 p-3 rounded">
-      <p class="font-semibold mb-3">日記投稿日数</p>
-      <p class="text-end"><span class="font-semibold text-2xl"><%#= @words.count %></span> 日</p>
+      <p class="font-semibold mb-3">これまでの日記投稿日数</p>
+      <p class="text-end"><span class="font-semibold text-2xl"><%= @diary_posted_days.count %></span> 日</p>
     </div>
   </div>
   <div class="flex justify-around">
