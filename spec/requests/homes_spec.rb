@@ -1,14 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Homes" do
-  describe "GET /index" do
-    it "returns http success" do
-      get root_path
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET /show" do
+  describe "GET /" do
     let(:login_user) { create(:user) }
 
     before do
@@ -16,7 +9,7 @@ RSpec.describe "Homes" do
     end
 
     it "returns http success" do
-      get homes_show_path
+      get root_path
       expect(response).to have_http_status(:success)
     end
   end
