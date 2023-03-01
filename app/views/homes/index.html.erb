@@ -1,5 +1,13 @@
-<div class="bg-white shadow mx-auto sm:my-8 sm:p-6 px-6 pt-6 pb-20 sm:w-8/12 rounded">
-  <div class="mx-6 mt-8">
-    <h1>English Diary</h1>
+<div class="bg-white mx-auto sm:my-8 sm:p-6 px-6 pt-6 pb-8 sm:w-8/12 sm:rounded">
+  <div class="text-center mx-6 mt-8">
+    <h1 class="pb-6 sm:text-8xl text-5xl font-bold tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
+      English Diary
+    </h1>
+    <ul class="mt-24 mb-12 text-slate-600">
+      <li class="hover:font-bold text-lg"><%= link_to " アカウント登録して英語日記を始める", new_user_registration_path %></li>
+      <li class="hover:font-bold text-lg mt-3">
+        <%= button_to "ゲストログイン（閲覧用）", users_guest_sign_in_path, data: { turbo_method: :post } %>
+      </li>
+    </ul>
   </div>
 </div>
