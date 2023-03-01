@@ -49,6 +49,11 @@
   * ログイン、ログアウト機能
   * ゲストユーザーログイン機能
 
+* __マイページ関連機能__
+  * 日記投稿日数表示機能
+  * 日記投稿回数表示機能
+  * 学んだ単語数表示機能
+
 * __英語日記投稿機能__
   * 日本語日記、英語日記投稿機能
   * 日記編集、削除機能
@@ -73,8 +78,8 @@ English Diaryを利用し、みんなで英会話能力を向上させましょ�
 
 ## インストール方法
 ```
-$ git clone 
-$ cd 
+$ git clone https://git.heroku.com/polar-citadel-36477.git
+$ cd english_diary_app
 $ docker-compose build
 $ docker-compose up -d
 $ docker-compose run web rails db:create
