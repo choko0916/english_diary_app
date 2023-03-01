@@ -1,4 +1,4 @@
-<div class="bg-white shadow mx-auto my-8 p-6 w-8/12 rounded">
+<div class="bg-white shadow mx-auto my-8 p-6 sm:w-8/12 sm:rounded">
   <div class="user_input_area">
     <h3 class="font-semibold">プロフィール編集</h3>
     <%= form_with model: @user, url: profiles_path do |f| %>
@@ -11,19 +11,19 @@
           </svg>
         <% end %>
       </div>
-      <div class="field mt-3">
+      <div class="field mt-4">
         <div><%= f.label :avatar, "アイコン画像" %></div>
         <div><%= f.file_field :avatar, class: "avatar" %></div>
       </div>
-      <div class="field mt-3">
+      <div class="field mt-6">
         <div><%= f.label :username, "ユーザーネーム" %></div>
-        <div><%= f.text_field :username, class: "name w-4/5" %></div>
+        <div><%= f.text_field :username, class: "name sm:w-4/5 w-full" %></div>
       </div>
-      <div class="field mt-3">
+      <div class="field mt-6">
         <div><%= f.label :bio, "一言メッセージ" %></div>
-        <div><%= f.text_area :bio, class: "bio w-4/5 h-5/6" %></div>
+        <div><%= f.text_area :bio, class: "bio sm:w-4/5 w-full h-5/6" %></div>
       </div>
-      <div class="field mt-3 text-end">
+      <div class="field mt-6 text-end">
         <div><%= f.submit "更新", class: "submit" %></div>
       </div>
     <% end %>
