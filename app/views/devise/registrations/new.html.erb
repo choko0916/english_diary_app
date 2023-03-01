@@ -1,17 +1,17 @@
 
-<div class="bg-white shadow mx-auto mt-8 mb-3 py-6 px-10 w-8/12 rounded">
+<div class="bg-white shadow mx-auto sm:mt-8 sm:mb-3 py-6 px-10 sm:w-8/12 sm:rounded">
   <h2 class="text-2xl font-semibold te ml-0 pl-0 mb-8">Sign up</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field mb-3">
       <%= f.label :username, "ユーザーネーム" %><span class="font-bold text-xs p-0.5 text-rose-500 bg-rose-100 ml-1">必須</span><br />
-      <%= f.text_field :username, class:"w-4/5" %>
+      <%= f.text_field :username, class:"sm:w-4/5 w-full" %>
     </div>
 
     <div class="field mb-3">
       <%= f.label :email %><span class="font-bold text-xs p-0.5 text-rose-500 bg-rose-100 ml-1">必須</span><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"w-4/5" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"sm:w-4/5 w-full" %>
     </div>
 
     <div class="field mb-3">
@@ -19,12 +19,12 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> 文字以上)</em>
       <% end %><span class="font-bold text-xs p-0.5 text-rose-500 bg-rose-100 ml-1">必須</span><br />
-      <%= f.password_field :password, autocomplete: "new-password", class:"w-4/5" %>
+      <%= f.password_field :password, autocomplete: "new-password", class:"sm:w-4/5 w-full" %>
     </div>
 
     <div class="field mb-3">
       <%= f.label :password_confirmation %><span class="font-bold text-xs p-0.5 text-rose-500 bg-rose-100 ml-1">必須</span><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"w-4/5" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"sm:w-4/5 w-full" %>
     </div>
 
     <div class="actions">
