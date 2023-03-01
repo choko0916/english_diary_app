@@ -1,8 +1,8 @@
 <div class="index_container">
-  <h2 class="font-semibold"><%= current_user.username %>さんの単語帳</h2>
+  <h2 class="font-semibold text-center my-6"><%= current_user.username %>さんの単語帳</h2>
   <div class="diaries">
     <% @words.each do |word| %>
-      <div class="bg-white shadow mx-auto mt-3 mb-3 p-6 w-8/12 rounded">
+      <div class="bg-white shadow mx-auto sm:my-8 mb-4 p-6 sm:w-8/12 sm:rounded">
         <div class="mb-3 container_top">
           <div class="created_at">
             <%= word.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
