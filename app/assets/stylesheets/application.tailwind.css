@@ -118,7 +118,7 @@ header {
 
 .bottombar {
   background-color: #f8b042;
-  z-index: 100;
+  z-index: 1;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -131,10 +131,6 @@ footer {
   margin-bottom: 0;
   color: white;
   padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
 }
 
 .container_top {
