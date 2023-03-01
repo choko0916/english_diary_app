@@ -1,4 +1,4 @@
-<div class="bg-white shadow mx-auto mt-3 mb-3 py-6 px-10 w-8/12 rounded">
+<div class="bg-white shadow mx-auto sm:mt-8 sm:mb-3 py-6 px-10 sm:w-8/12 sm:rounded">
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -34,7 +34,7 @@
 
     <div class="field">
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%= f.password_field :current_password, autocomplete: "current-password" %>
+      <%= f.password_field :current_password, autocomplete: "current-password", class:"sm:w-4/5 w-full" %>
     </div>
 
     <div class="actions">
