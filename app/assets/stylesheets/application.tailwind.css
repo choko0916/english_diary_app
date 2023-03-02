@@ -10,6 +10,12 @@ body {
   background-color: rgb(247, 247, 252);
 }
 
+@media not all and (min-width: 640px) {
+  body {
+    background-color: white
+  }
+}
+
 a {
   color: #262338;
 }

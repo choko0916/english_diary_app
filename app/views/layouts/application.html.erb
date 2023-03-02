@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EnglishDiary</title>
+    <title>English Diary</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/@oddcamp/cocoon-vanilla-js@1.1.3/index.min.js' %>
-    <%= javascript_importmap_tags %>
     <%= javascript_import_module_tag "custom/layout" %>
   </head>
   <body>
@@ -32,7 +31,7 @@
                 </svg>
               <% end %>
             </li>
-            <li class="px-8 text-center"><%= link_to "ホーム", root_path, class:"leading-10 block" %></li>
+            <li class="px-8 text-center"><%= link_to "ホーム", homes_show_path, class:"leading-10 block" %></li>
             <li class="px-8"><%= link_to "プロフィール変更", edit_profiles_path, class:"leading-10 block" %></li>
             <li class="px-8 text-black hover:font-bold"><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:"leading-10 block" %></li>
           <% else %>
@@ -60,7 +59,7 @@
               </svg>
             <% end %>
           </li>
-          <li class="px-8 py-2"><%= link_to "ホーム", root_path %></li>
+          <li class="px-8 py-2"><%= link_to "ホーム", homes_show_path %></li>
           <li class="px-8 py-2"><%= link_to "プロフィール変更", edit_profiles_path %></li>
           <li class="px-8 py-2 text-black hover:font-bold"><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% else %>
