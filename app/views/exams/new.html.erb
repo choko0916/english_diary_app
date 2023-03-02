@@ -1,8 +1,8 @@
-<div class="bg-white shadow mx-auto my-8 p-6 sm:w-8/12 sm:rounded">
-  <h1 class="font-semibold text-3xl exam">単語テスト<span>10問</span></h1>
+<div class="bg-white sm:shadow mx-auto my-8 p-6 sm:w-8/12 sm:rounded">
+  <h1 class="font-semibold pl-2 max-sm:text-center text-3xl exam">単語テスト<span>10問</span></h1>
   <%= form_with model: @exam, url: exams_path do |f| %>
-  <div class="exam_start field text-end">
-    <%= f.submit "テスト開始", class:"submit" %>
+  <div class="exam_start field sm:text-end text-center">
+    <%= f.submit "テスト開始", class:"submit max-sm:w-9/12" %>
   </div>
   <% end %>
 </div>
