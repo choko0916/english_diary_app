@@ -30,7 +30,7 @@
   * __Docker 20.10.16 / docker-compose 3.9__
 
 * __フロントエンド__
-  * __HTML / tailwind.css / javascript__
+  * __HTML / tailwindcss / javascript__
 
 * __バックエンド__
   * __Ruby 3.1.0__
