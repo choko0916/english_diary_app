@@ -1,8 +1,8 @@
 class ExamsController < ApplicationController
   def show
     @exam = Exam.find(params[:id])
-    @correct_answers = @exam.exam_questions.where(is_correct: true)
-    @wrong_answers = @exam.exam_questions.where(is_correct: false)
+    @correct_answers = @exam.exam_questions.includes(:word).where(is_correct: true)
+    @wrong_answers = @exam.exam_questions.includes(:word).where(is_correct: false)
   end
 
   def new
