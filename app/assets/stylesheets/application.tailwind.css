@@ -153,7 +153,7 @@ footer {
   color: white;
   border: none;
   border-radius: 3px;
-  padding: 3px 10px;
+  padding: 5px 20px;
 }
 
 .submit:hover {
@@ -179,7 +179,7 @@ footer {
   color: white;
   border: none;
   border-radius: 3px;
-  padding: 3px 10px;
+  padding: 5px 20px;
 }
 
 .diary_destroy_button:hover {
@@ -193,7 +193,7 @@ footer {
   color: white;
   border: none;
   border-radius: 3px;
-  padding: 3px 10px;
+  padding: 5px 20px;
 }
 
 .word_button:hover {
