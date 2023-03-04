@@ -9,23 +9,26 @@
           </div>
         </div>
         <div class="word">
-          <div class="japanese_word">
-            <%= word.japanese_word %>
+          <div class="flex mb-2">
+            <p class="text-slate-600 px-1 mr-3 bg-red-200 rounded-full bold font-semibold">日</p>
+            <p><%= word.japanese_word %></p>
           </div>
         </div>
-        <div class="english_word mb-3">
-          <%= word.english_word %>
+        <div class="flex mb-3">
+          <p class="text-slate-600 px-1 mr-3 bg-sky-200 rounded-full font-semibold">英</p>
+          <p><%= word.english_word %></p>
         </div>
         <% if word.memo.present? %>
-          <div class="memo pt-3 border-t">
-            <%= word.memo %>
+          <div class="flex pt-3 border-t">
+            <p class="text-slate-600 inline px-1 mr-3 bg-yellow-100 rounded font-semibold">メモ</p>
+            <p><%= word.memo %></p>
           </div>
         <% end %>
         <div class="link">
           <%#= link_to "編集", edit_word_path(word.id) %>
         </div>
         <div class="link text-end">
-          <%= link_to "日記へ", diary_path(id: word.diary_id), class:"text-white px-2 py-1 bg-blue-300 hover:bg-blue-400 hover:text-white rounded" %>
+          <%= link_to "日記へ", diary_path(id: word.diary_id), class:"text-white px-3 py-1.5 bg-gray-300 hover:bg-gray-400 hover:text-white rounded" %>
         </div>
       </div>
     <% end %>
