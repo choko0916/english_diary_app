@@ -9,16 +9,19 @@
           </div>
         </div>
         <div class="word">
-          <div>
-            <%= word.japanese_word %>
+          <div class="flex mb-2">
+            <p class="text-slate-600 px-1 mr-3 bg-red-200 rounded-full bold font-semibold">日</p>
+            <p><%= word.japanese_word %></p>
           </div>
         </div>
-        <div class="mb-3">
-          <%= word.english_word %>
+        <div class="flex mb-3">
+          <p class="text-slate-600 px-1 mr-3 bg-sky-200 rounded-full font-semibold">英</p>
+          <p><%= word.english_word %></p>
         </div>
         <% if word.memo.present? %>
-          <div class="memo pt-3 border-t">
-            <%= word.memo %>
+          <div class="flex pt-3 border-t">
+            <p class="text-slate-600 inline px-1 mr-3 bg-yellow-100 rounded font-semibold">メモ</p>
+            <p><%= word.memo %></p>
           </div>
         <% end %>
         <div class="link">
